@@ -10,7 +10,7 @@
         <h1>REKRUTEX PHP</h1>
         
         <?php        
-        print("PHP działa.");
+        print("PHP działa.<br>");
         $baza=mysqli_connect("remotemysql.com","XtKYx97kfB","rt9JC3srMC","XtKYx97kfB");
         if (mysqli_connect_errno())
         {echo "Wystąpił błąd połączenia z bazą";}
