@@ -7,6 +7,7 @@
     </head>
     <script></script>
     <body>
+<<<<<<< Updated upstream
         <h1>REKRUTEX PHP</h1>
         
         <?php        
@@ -21,6 +22,9 @@
         {echo $row['kategoria'] . " " . $row['tresc']; echo "<br>"; }
         mysqli_close($baza);
         ?>
+=======
+        <h1>REKRUTEX PHP test</h1>
+>>>>>>> Stashed changes
     </body>
     <script>
         
