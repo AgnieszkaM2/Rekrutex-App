@@ -12,6 +12,7 @@ import { KategorieComponent } from './components/kategorie/kategorie.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { FormularzKontaktowyComponent } from './components/formularz-kontaktowy/formularz-kontaktowy.component';
 import { PanelAdministratoraComponent } from './components/panel-administratora/panel-administratora.component';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PanelAdministratoraComponent } from './components/panel-administratora/
     KategorieComponent,
     QuizComponent,
     FormularzKontaktowyComponent,
-    PanelAdministratoraComponent
+    PanelAdministratoraComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

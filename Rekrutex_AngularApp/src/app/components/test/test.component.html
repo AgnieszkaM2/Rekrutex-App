@@ -1,0 +1,30 @@
+<div>
+    <h2>Rekrutex</h2>
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <ul>
+        <li><a routerLink="/strona-glowna" routerLinkActive="active">Strona główna</a></li>
+        <li><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></li>
+        <li><a routerLink="/logowanie" routerLinkActive="active">Logowanie</a></li>
+      </ul> 
+</div>
+<br>
+<hr>
+<h3>Pytania</h3>
+<hr>
+<div >
+    <ul>
+      <li class="questions-list" *ngFor='let question of Questions'> 
+        {{ question.id }} - {{question.kategoria}}: <br> {{question.tresc}}: <br> a - {{question.odp1}} <br> b - {{question.odp2}} <br> c - {{question.odp3}} <br> d - {{question.odp4}} 
+      </li>
+    </ul>
+  
+</div>
+<!--
+  Utworzony dodatkowy komponent do testowania różnych rzeczy.
+  Obecnie wyświetla za pomocą ngFor po kolei elementy listy z pytaniami i ich odpowiedziami zwracanej z api.
+  Wszystko co dzieje się pod html - zmienne, funkcje, itd. do obsługi strony znajduje się w pliku z typescriptem - test.component.ts
+-->
