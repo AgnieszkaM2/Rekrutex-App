@@ -13,6 +13,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { FormularzKontaktowyComponent } from './components/formularz-kontaktowy/formularz-kontaktowy.component';
 import { PanelAdministratoraComponent } from './components/panel-administratora/panel-administratora.component';
 import { TestComponent } from './components/test/test.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { TestComponent } from './components/test/test.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

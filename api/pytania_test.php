@@ -17,7 +17,7 @@ if($result = mysqli_query($con,$sql))
     $pytania[$r]['odp2'] = $row['odp2'];
     $pytania[$r]['odp3'] = $row['odp3'];
     $pytania[$r]['odp4'] = $row['odp4'];
-    $pytania[$r]['poprawna'] = $row['poprawna'];
+    $pytania[$r]['prawidlowa'] = $row['prawidlowa'];
     $r++;
   }
     

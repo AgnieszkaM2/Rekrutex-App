@@ -12,12 +12,46 @@
       </ul> 
 </div>
 <br>
-<h3>Logowanie</h3>
 <br>
-<hr>
-<br>
-<a routerLink="/rejestracja" routerLinkActive="active"><h3>Rejestracja</h3></a>
-<br>
-<hr>
-<br>
-<a routerLink="/panel-administratora" routerLinkActive="active"><h3>Panel Administratora</h3></a>
+<div>
+<div class="main-div" align="center">
+    <br>
+    <div class="login-header" align="center"><h1>Zaloguj się</h1><hr></div>
+    <br>
+    <div class="login-form" align="center">
+      <form [formGroup]="loginForm" align="center" (ngSubmit)="login()">
+        <div class="form-group" align="center">
+          <br>
+          <label for="userLogin">Login użytkownika: </label><br><hr width="50%">
+          <input id="userLogin" type="text" required name="userLogin" class="form-control" formControlName="userLogin" placeholder="">
+          <br>
+          <br><label *ngIf="userLogin?.touched && userLogin?.errors?.['required']">Pole obowiązkowe.</label>
+        </div>
+        <div class="form-group" align="center">
+          <label for="password">Hasło: </label><br><hr width="50%">
+          <input id="password" type="password" required name="password" class="form-control" formControlName="password" placeholder="">
+          <br><label *ngIf="password?.touched && password?.errors?.['required']">Pole obowiązkowe.</label>
+        </div>
+        <br><br><hr width="80%"><br>
+        <button type="submit" class="signup">Zaloguj się</button>
+        <br>
+        <br><hr width="80%"><br>
+        <h4 align="center">Nie masz jeszcze konta? Zarejestruj się:</h4>
+        <div class="log-register" align="center">
+          <p align="center"><a routerLink="/rejestracja" routerLinkActive="active"><h2>Rejestracja</h2></a></p>
+        </div>
+        <hr width="80%"><br>
+      </form>
+    </div>
+    
+</div>
+<div class= "loginResult" align="center" *ngIf="loginStatus">
+  <h1 align="center">Pomyślnie zalogowano się</h1><hr>
+</div>
+<div class= "loginResult" align="center" *ngIf="loginError">
+  <h1 align="center">Błędne dane użytkownika!</h1>
+  <br><h2 align="center">Spróbuj ponownie</h2><br>
+  <div class="log-register" align="center">
+    <p align="center"><button class="signup" (click)="goBack()">Powrót</button></p>
+  </div>
+</div>

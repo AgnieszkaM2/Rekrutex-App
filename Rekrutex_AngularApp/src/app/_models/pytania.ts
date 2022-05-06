@@ -6,7 +6,7 @@ export interface Pytanie {
     odp2: string;
     odp3: string;
     odp4: string;
-    poprawna: string;
+    prawidlowa: number;
 }
 
 //Odpowiada za model danych pytań

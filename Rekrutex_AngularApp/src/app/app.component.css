@@ -11,6 +11,7 @@ aside {
 .aside-wrapper {
   padding: 0px 0px;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .logo {
@@ -45,6 +46,8 @@ a:link {
   color: #000000;
   text-decoration: none;
 }
+
+a:active {color: black;}
 
 a:visited {
   color: #000000;

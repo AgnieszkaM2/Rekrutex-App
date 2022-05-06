@@ -1,10 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color:aquamarine ; 
+    background-color: white;
+    font-family: 'Times New Roman'; 
 }
-h1 {
-    color: blue;
+a:link {
+    color: #000000;
+    text-decoration: none;
 }
-p {
-    color: red;
+  
+a:active {color: black;}
+  
+a:visited {
+    color: #000000;
 }
+  
+a:hover {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-div {
+    height: 80%;
+    width: 50%;
+    background-color: #bfffff;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+

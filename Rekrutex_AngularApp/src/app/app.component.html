@@ -17,8 +17,10 @@
   <ul>
     <li><a routerLink="/strona-glowna" routerLinkActive="active">STRONA GŁÓWNA</a></li>
     <li><a routerLink="/kategorie" routerLinkActive="active">KATEGORIE</a></li>
-    <li><a routerLink="/logowanie" routerLinkActive="active">LOGOWANIE</a></li>
+    <li *ngIf="isUser==false"><a routerLink="/logowanie" routerLinkActive="active">LOGOWANIE</a></li>
+    <li *ngIf="isUser" ng-click="logout()">WYLOGUJ</li>
   </ul>
   
 </aside>
+<h3 *ngFor='let item of user'> {{item.imie}} </h3>
 <router-outlet></router-outlet>
