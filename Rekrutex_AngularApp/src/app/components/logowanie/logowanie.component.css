@@ -13,13 +13,16 @@
 
 .loginResult {
     position: absolute;
-    top:32%;
-    height: 100%;
+    top:250px;
+    height: 40%;
     width: 60%;
-    background-color: #bfffff;
+    background-color: #204040e4;
+    color: white;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 10%;
+    border: 7px double rgba(191,255,255, 0.7);
+    border-radius: 15px;
 
 }
 .login-header h1{

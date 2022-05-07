@@ -73,6 +73,7 @@ export class RejestracjaComponent implements OnInit {
 
   registerStatus: boolean=false;
   registerError: boolean=false;
+  errorMessage="";
 
   register() {
     let registerData = {
@@ -89,12 +90,16 @@ export class RejestracjaComponent implements OnInit {
       this.registerStatus=true;
       console.log('wysłane')
     },
-    (res: any) =>{
-      this.registerStatus=true;
-      console.log('success');
-      
-    })
-    /*console.log(this.registerForm.value);*/
+    (error) => {
+      if (error.status === 404) {
+        this.errorMessage="Błąd serwera";
+      }else if (error.status === 400) {
+        this.errorMessage="Użytkownik już istnieje, wprowadź inne dane.";
+      }else {
+        this.errorMessage="";
+      }
+      this.registerError=true;
+    }) 
     
   }
   goBack(): void {

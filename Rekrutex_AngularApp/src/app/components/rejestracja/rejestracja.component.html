@@ -1,19 +1,6 @@
-<div>
-    <h2>Rekrutex</h2>
-</div>
-<br>
-<hr>
-<br>
-<div>
-    <ul>
-        <li><a routerLink="/strona-glowna" routerLinkActive="active">Strona główna</a></li>
-        <li><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></li>
-        <li><a routerLink="/logowanie" routerLinkActive="active">Logowanie</a></li>
-      </ul> 
-</div>
-<br>
 
-
+<br>
+<br>
 <div class="main-div" align="center">
     <br>
     <div class="register-header" align="center"><h1>Załóż konto</h1><hr></div>
@@ -79,5 +66,13 @@
     <br><h2 align="center">Przejdź na stronę logowania</h2><br>
     <div class="log-register" align="center">
       <p align="center"><a routerLink="/logowanie" routerLinkActive="active"><h2>Zaloguj się</h2></a></p>
+    </div>
+  </div>
+  <div class= "registerResult" align="center" *ngIf="registerError">
+    <h1 align="center">Rejestracja nie powiodła się!</h1>
+    <br><h2 align="center">{{errorMessage}}</h2><br>
+    <br><h2 align="center">Spróbuj ponownie</h2><br>
+    <div class="log-register" align="center">
+      <p align="center"><button class="signup" (click)="goBack()">Powrót</button></p>
     </div>
   </div>

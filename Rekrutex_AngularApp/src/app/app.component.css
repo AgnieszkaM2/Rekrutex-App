@@ -61,6 +61,10 @@ input {
   display: none;
 }
 
+#logout:hover {
+  color: #ffffff !important;
+} 
+
 /* Toggler Functionality */
 input:checked ~ aside {
   left: -20%;

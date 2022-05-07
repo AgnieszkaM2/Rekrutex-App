@@ -5,7 +5,7 @@ require 'connect.php';
 $logindata=json_decode(file_get_contents("php://input"));
 $uzytkownik=[];
 
-if(sizeof($logindata)!=0){
+if($logindata!=null){
     $errors="";
 
     $param_login=$logindata->login;
@@ -36,7 +36,7 @@ if(sizeof($logindata)!=0){
               
             }
 
-            echo json_encode([$uzytkownik]);
+            echo json_encode($uzytkownik);
 
         }else
         {

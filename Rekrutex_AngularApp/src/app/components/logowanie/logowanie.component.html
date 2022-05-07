@@ -1,16 +1,4 @@
-<div>
-    <h2>Rekrutex</h2>
-</div>
-<br>
-<hr>
-<br>
-<div>
-    <ul>
-        <li><a routerLink="/strona-glowna" routerLinkActive="active">Strona główna</a></li>
-        <li><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></li>
-        <li><a routerLink="/logowanie" routerLinkActive="active">Logowanie</a></li>
-      </ul> 
-</div>
+
 <br>
 <br>
 <div>
@@ -46,7 +34,12 @@
     
 </div>
 <div class= "loginResult" align="center" *ngIf="loginStatus">
-  <h1 align="center">Pomyślnie zalogowano się</h1><hr>
+  <h1 align="center">Logowanie przebiegło pomyślnie</h1><hr>
+  <br>
+  <h2>Zostaniesz przekierowany za: </h2>
+  <br>
+  <h1>{{timer}} s....</h1>
+  <br>
 </div>
 <div class= "loginResult" align="center" *ngIf="loginError">
   <h1 align="center">Błędne dane użytkownika!</h1>

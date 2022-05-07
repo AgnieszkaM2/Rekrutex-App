@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LogowanieComponent implements OnInit {
   
-  User: any;
+  user: any;
   loginForm: FormGroup;
   loginStatus: boolean=false;
   loginError: boolean = false;
@@ -37,9 +37,24 @@ export class LogowanieComponent implements OnInit {
   }
 
   redirecting: boolean=false;
+  timer = 5;
+  interval;
   
   redirect(){
-    this.router.navigateByUrl("/strona-glowna");
+    this.router.navigateByUrl("/strona-glowna")
+    .then(() => {
+      window.location.reload();
+    });
+  }
+
+  startTimer() {
+    this.interval = setInterval(() => {
+      if(this.timer > 0) {
+        this.timer--;
+      } else {
+        this.timer = 5;
+      }
+    },1000)
   }
   
 login() {
@@ -50,16 +65,18 @@ login() {
     };
     this.authService.login(loginData).subscribe(
       data => {
-      console.log(data); 
-      this.loginStatus=true;
-    },
-    (res: any) =>{
+      console.log(data);
       console.log('success');
       this.loginStatus=true;
+      this.startTimer();
       setTimeout(() => {
         this.redirecting=true;
-      }, 5000),  //5s
-      this.redirect();     
+        this.redirect(); 
+      }, 5000);  //5s  
+      
+    },
+    (error) => {
+      this.loginError=true;
     })  
   }
 

@@ -10,8 +10,6 @@ import { identifierName } from '@angular/compiler';
 })
 export class AuthService {
 
-  private currentUserSource = new ReplaySubject<Uzytkownik>(1);
-  currentUser$ = this.currentUserSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -23,71 +21,52 @@ export class AuthService {
   readonly loginPath = this.BaseURL + "/login.php";
 
   register(data): Observable<any> {
-    return this.http.post(this.registerPath, data)
+    return this.http.post(this.registerPath, data);
   }
 
   login(data): Observable<any> {
     return this.http.post(this.loginPath, data).pipe(
-      map((response: Uzytkownik) => {
-        const user = response;
-        let res = response;
-        this.saveData(res);
-        //if(user){
-          //let res = user;
-          // let userId= user['id'];
-          // let userName=user['imie'];
-          // let userLastName=user['nazwisko'];
-          // let userType=user['czy_administrator'];
-          //this.saveData(res);
-
-        //}
-        // if (user) {
-        //   localStorage.setItem('user', JSON.stringify(user));
-        //   this.currentUserSource.next(user);
-        // }
+      map((response: any) => {
+        let user=JSON.stringify(response);
+        user=JSON.parse(user);
+        if(user){
+          let userId= user['id'];
+          let userName=user['imie'];
+          let userLastName=user['nazwisko'];
+          let userType=user['czy_administrator'];
+          this.saveData(userId, userName, userLastName,userType);
+        }
       })
     )
   }
   
-  // saveData(userId, userName, userLastName,userType,res) {
-  //   if(userType==1){
-  //     sessionStorage.setItem('id', userId);
-  //     sessionStorage.setItem('name', userName);
-  //     sessionStorage.setItem('lastname', userLastName);
-  //     sessionStorage.setItem('userType', 'admin');
-  //     sessionStorage.setItem('res', res);
-  //   }else{
-  //     sessionStorage.setItem('id', userId);
-  //     sessionStorage.setItem('name', userName);
-  //     sessionStorage.setItem('lastname', userLastName);
-  //     sessionStorage.setItem('userType', 'user');
-  //     sessionStorage.setItem('res', res);
-  //   }
-    
-  // }
-  saveData(res) {
-    sessionStorage.setItem('res', res);
+  saveData(userId, userName, userLastName,userType) {
+    if(userType==1){
+      sessionStorage.setItem('id', userId);
+      sessionStorage.setItem('name', userName);
+      sessionStorage.setItem('lastname', userLastName);
+      sessionStorage.setItem('userType', 'admin');
+    }else{
+      sessionStorage.setItem('id', userId);
+      sessionStorage.setItem('name', userName);
+      sessionStorage.setItem('lastname', userLastName);
+      sessionStorage.setItem('userType', 'user');
+    }
     
   }
+
+
   getData() {
-    return sessionStorage.getItem('res');
+    let user= {
+      Id: sessionStorage.getItem('id'),
+      Name:sessionStorage.getItem('name'),
+      LastName:sessionStorage.getItem('lastname'),
+      UserType:sessionStorage.getItem('userType'),
+
+    }
+    return user;
   }
 
-  // getData() {
-  //   let user= {
-  //     Id: sessionStorage.getItem('id'),
-  //     Name:sessionStorage.getItem('name'),
-  //     LastName:sessionStorage.getItem('lastname'),
-  //     UserType:sessionStorage.getItem('userType'),
-  //     res:sessionStorage.getItem('res')
-
-  //   }
-  //   return user;
-  // }
-
-  // setCurrentUser(user: Uzytkownik) {
-  //   this.currentUserSource.next(user);
-  // }
   getCurrentUser(){
     return this.getData();
   }
@@ -100,12 +79,7 @@ export class AuthService {
   }
 
   logout() {
-    //this.removeData();
-  }
-  
-  logoutt() {
-    localStorage.removeItem('user');
-    this.currentUserSource.next(null);
+    this.removeData();
   }
 
 }
