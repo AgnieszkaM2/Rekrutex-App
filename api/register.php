@@ -20,8 +20,11 @@ if($registerdata!=null){
 
     $param_password=password_hash($password, PASSWORD_DEFAULT);
 
-    $sql2="SELECT imie, nazwisko, login FROM uzytkownicy where imie='$imie' and nazwisko ='$nazwisko' and login='$login'";
-    if($res= mysqli_query($con,$sql2)){
+
+    $sql2="SELECT imie, nazwisko, login FROM uzytkownicy where (imie='$imie' and nazwisko ='$nazwisko') or login='$login'";
+    $res= mysqli_query($con,$sql2);
+    $row  = mysqli_fetch_array($res);
+    if(is_array($row)){
       http_response_code(400);
     }else{
       $sql = "INSERT INTO uzytkownicy(login, haslo, imie, nazwisko, nr_telefonu, email, wynik, czyadministrator) VALUES('$login', '$param_password', '$imie', '$nazwisko', '$nr_telefonu', '$email', '$wynik', '$czy_administrator')";
