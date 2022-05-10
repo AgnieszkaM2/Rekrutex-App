@@ -4,11 +4,11 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  left: 20%;
+  left: 0%;
   padding: 0.5%;
   position: relative;
   text-align: center;
-  width: 60%;
+  width: 100%;
 }
 #formularz_cialo {
   background-color: #bfffff;
