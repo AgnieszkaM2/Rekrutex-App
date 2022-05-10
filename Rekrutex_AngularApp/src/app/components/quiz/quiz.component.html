@@ -1,21 +1,66 @@
-<div>
-    <h2>Rekrutex</h2>
+<div class="main-div" align="center">
+    <div class="okno_tlo" id="quiz_tlo">
+      <div class="okno_cialo" id="quiz_cialo">
+        
+        <div class="naglowek_tlo" id="quiz_naglowek_tlo">
+          <div class="naglowek_cialo" id="quiz_naglowek_cialo">
+            <h1>Pytanie 14/23:</h1>
+          </div>
+        </div>
+        <br>
+        <form>
+          <div class="tresc_tlo" id="quiz_pytanie_tlo">
+             <div class="tresc_cialo" id="quiz_pytanie_cialo">
+              <h2>Skomplikowana treść pytania dla kandydata?</h2>
+            </div>
+          </div>
+          <br>
+          <div class="tresc_tlo" id="quiz_odpowiedz_tlo">
+             <div class="tresc_cialo" id="quiz_odpowiedz_cialo">
+              <input type="radio" id="odpowiedz_A" name="odpowiedzi" value="1">
+              <label for="odpowiedz_A">A) Treść odpowiedzi</label>
+            </div>
+          </div>
+          <div class="tresc_tlo" id="quiz_odpowiedz_tlo">
+             <div class="tresc_cialo" id="quiz_odpowiedz_cialo">
+              <input type="radio" id="odpowiedz_B" name="odpowiedzi" value="2">
+              <label for="odpowiedz_B">B) Treść odpowiedzi</label>
+            </div>
+          </div>
+          <div class="tresc_tlo" id="quiz_odpowiedz_tlo">
+             <div class="tresc_cialo" id="quiz_odpowiedz_cialo">
+              <input type="radio" id="odpowiedz_C" name="odpowiedzi" value="3">
+              <label for="odpowiedz_C">C) Treść odpowiedzi</label> 
+            </div>
+          </div>
+          <div class="tresc_tlo" id="quiz_odpowiedz_tlo">
+             <div class="tresc_cialo" id="quiz_odpowiedz_cialo">
+              <input type="radio" id="odpowiedz_D" name="odpowiedzi" value="4">
+              <label for="odpowiedz_D">D) Treść odpowiedzi</label> 
+            </div>
+          </div>
+          
+          <div id="quiz_stopka">
+        
+            <div id="quiz_lewo">
+              <div class="tekst_tlo" id="quiz_tekst_tlo">
+                <div class="tekst_cialo" id="quiz_tekst_cialo">
+                  <h2>Postęp: 0%</h2>
+                </div>
+              </div>
+            </div>
+  
+            <div id="quiz_prawo">
+              <div class="przycisk_tlo" id="quiz_submit_tlo">
+                <div class="przycisk_cialo" id="quiz_submit_cialo">
+                  <input type="submit" id="quiz_dalej">
+                  <label for="quiz_dalej">DALEJ</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
 </div>
-<br>
-<hr>
-<br>
-<div>
-    <ul>
-        <li><a routerLink="/strona-glowna" routerLinkActive="active">Strona główna</a></li>
-        <li><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></li>
-        <li><a routerLink="/logowanie" routerLinkActive="active">Logowanie</a></li>
-      </ul> 
-</div>
-<br>
-<h3>Quiz</h3>
-<br>
-<br>
-<br>
-<hr>
-<br>
-<a routerLink="/formularz-kontaktowy" routerLinkActive="active"><h3>Formularz kontaktowy</h3></a>
