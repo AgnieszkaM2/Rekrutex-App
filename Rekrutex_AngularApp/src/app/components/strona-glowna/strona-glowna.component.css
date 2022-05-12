@@ -1,4 +1,4 @@
-#formularz_tlo {
+#glowna_tlo {
   align-self: center;
   background-color: #60bfbf;
   box-sizing: border-box;
@@ -10,13 +10,13 @@
   text-align: center;
   width: 100%;
 }
-#formularz_cialo {
+#glowna_cialo {
   background-color: #bfffff;
   box-sizing: border-box;
   padding: 3%;
   font-family:Arial, Helvetica, sans-serif;
 }
-#formularz_naglowek_tlo {
+#glowna_naglowek_tlo {
   background-color: #204040;
   box-sizing: border-box;
   padding: 0.5%;
@@ -24,14 +24,14 @@
   left: 20%;
   position: relative;
 }
-#formularz_naglowek_cialo {
+#glowna_naglowek_cialo {
   background-color: #397373;
   color:#bfffff;
   box-sizing: border-box;
   font-weight: bold;
   padding:1px;
 }
-#formularz_submit_tlo_left {
+#glowna_submit_tlo_left {
   background-color: #000000;
   box-sizing: border-box;
   padding: 0.5%;
@@ -40,7 +40,7 @@
   width: 40%;
   left: 5%;
 }
-#formularz_submit_tlo_right {
+#glowna_submit_tlo_right {
   background-color: #000000;
   box-sizing: border-box;
   padding: 0.5%;
@@ -49,11 +49,71 @@
   width: 40%;
   right: 5%;
 }
-#formularz_submit_cialo {
+#glowna_submit_cialo {
   background-color: #204040;
   box-sizing: border-box;
   font-weight: bold;
   color: white;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+#glowna_submit_tlo_left input[type="submit"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+#glowna_submit_tlo_left label {
+  color:black;
+  display: inline-block;
+  width:100%;
+  margin: 0;
+  /* background-color: #60bfbf; */
+  background-color: rgba(96,191,191,0.75);
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom:5px;
+
+}
+
+#glowna_submit_tlo_left label:hover {
+  background-color: rgba(96,191,191,0.5);
+}
+
+#glowna_submit_tlo_left input[type="submit"]:active + label {
+  background-color: rgba(191,255,255,1);
+
+}
+
+#glowna_submit_tlo_right input[type="submit"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+#glowna_submit_tlo_right label {
+  color:black;
+  display: inline-block;
+  width:100%;
+  margin: 0;
+  /* background-color: #60bfbf; */
+  background-color: rgba(96,191,191,0.75);
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom:5px;
+
+}
+
+#glowna_submit_tlo_right label:hover {
+  background-color: rgba(96,191,191,0.5);
+}
+
+#glowna_submit_tlo_right input[type="submit"]:active + label {
+  background-color: rgba(191,255,255,1);
+
 }
