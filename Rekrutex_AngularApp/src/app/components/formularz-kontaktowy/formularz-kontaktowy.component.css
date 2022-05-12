@@ -129,6 +129,73 @@
   box-sizing: border-box;
   font-weight: bold;
   color: white;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+#formularz_submit_tlo input[type="submit"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+#formularz_submit_tlo label {
+  color:black;
+  display: inline-block;
+  width:100%;
+  margin: 0;
+  /* background-color: #60bfbf; */
+  background-color: rgba(96,191,191,0.75);
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom:15px;
+
+}
+
+#formularz_submit_tlo label:hover {
+  background-color: rgba(96,191,191,0.5);
+}
+
+#formularz_submit_tlo input[type="submit"]:active + label {
+  background-color: rgba(191,255,255,1);
+
+}
+
+#formularz_upload_tlo input[type="file"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+#formularz_upload_tlo label {
+  color:black;
+  display: inline-block;
+  width:100%;
+  margin: 0;
+  /* background-color: #60bfbf; */
+  background-color: rgba(96,191,191,0.75);
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom:15px;
+
+}
+
+#formularz_upload_tlo label:hover {
+  background-color: rgba(96,191,191,0.5);
+}
+
+#formularz_upload_tlo input[type="file"]:active + label {
+  background-color: rgba(191,255,255,1);
+
+}
+
+#formularz_tekst_cialo{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom:5px;
 }
