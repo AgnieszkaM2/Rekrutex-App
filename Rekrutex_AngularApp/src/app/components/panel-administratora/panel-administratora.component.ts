@@ -11,5 +11,8 @@ export class PanelAdministratoraComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+id:any= "jeden";
+tabChange(ids:any){
+  this.id = ids;
+}
 }

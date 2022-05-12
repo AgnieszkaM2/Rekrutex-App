@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PanelAdministratoraComponent } from './panel-administratora.component';
 
 describe('PanelAdministratoraComponent', () => {
@@ -23,3 +22,4 @@ describe('PanelAdministratoraComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+export class TabGroupAnimationsExample {}
