@@ -15,10 +15,15 @@ export class PytaniaTestService {
   
   //url do konkretnego skryptu api
   readonly getTestQuestionPath = this.BaseURL + "/pytania_test.php";
+  readonly getCategoryPath = this.BaseURL + "/kategorie.php";
 
   //funkcja wykonująca zapytanie do api i zwracająca jego wynik
   getTestQuestion() {
     return this.http.get<Pytanie[]>(this.getTestQuestionPath);
+  }
+
+  getCategories() {
+    return this.http.get(this.getCategoryPath);
   }
 
 
