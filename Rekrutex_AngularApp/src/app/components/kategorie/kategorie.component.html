@@ -9,7 +9,7 @@
         <br>
         <ul>
             <li align = "center" class="categories-list" *ngFor='let category of categories'> 
-                <button class="category" (click)="setCategory(category.kategoria)">{{ category.kategoria }}</button>
+                <button class="category" (click)="setCategory(category.kategoria)"><a routerLink="/quiz" routerLinkActive="active">{{ category.kategoria }}</a></button>
             </li>
         </ul>
         <br>
