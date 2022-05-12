@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: white;
+    background-color: #bbdddd;
     font-family: 'Times New Roman'; 
 }
 a:link {
@@ -33,6 +33,69 @@ a {
     font-size: 20px;
     font-weight: 600;
 
+}
+
+.okno_tlo{
+  
+  
+}
+.okno_cialo{
+  
+  
+}
+
+.naglowek_tlo{
+  
+  
+}
+.naglowek_cialo{
+  
+  
+}
+
+.trest_tlo{
+  
+  
+}
+.tresc_cialo{
+  
+  
+}
+
+.input_tlo{
+  
+  
+}
+.input_cialo{
+  
+  
+}
+
+.przycisk_tlo{
+  
+  
+}
+.przycisk_cialo{
+  
+  
+}
+
+.obrazek_tlo{
+  
+  
+}
+.obrazek_cialo{
+  
+  
+}
+
+.tekst_tlo{
+  
+  
+}
+.tekst_cialo{
+  
+  
 }
 
 
