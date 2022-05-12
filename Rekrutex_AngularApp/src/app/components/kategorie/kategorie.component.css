@@ -43,6 +43,10 @@
     margin: 2%;
 }
 
+.category-body a {
+    color: white;
+}
+
 .category-body button:hover{
     transform: scale(1.08, 1.08);
     background-color: rgba(57,115,115, 0.8);
