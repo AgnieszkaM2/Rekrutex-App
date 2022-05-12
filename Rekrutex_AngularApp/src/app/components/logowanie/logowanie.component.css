@@ -1,13 +1,13 @@
 .login-header{
     height: 90%;
     width: 90%;
-    background-color: #397373;
-    color: #bfffff;
+    background-color: var(--header-bkg);
+    color: var(--main-div-bkg);
 }
 .login-form {
     height: 90%;
     width: 90%;
-    background-color: #60bfbf;
+    background-color: var(--content-bkg);
 
 }
 
@@ -16,12 +16,12 @@
     top:250px;
     height: 40%;
     width: 60%;
-    background-color: #204040e4;
-    color: white;
+    background-color: var(--popup-bkg);
+    color: var(--white-text);
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 10%;
-    border: 7px double rgba(191,255,255, 0.7);
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
     border-radius: 15px;
 
 }
@@ -30,43 +30,43 @@
 }
 
 .log-register p {
-    color: white;
+    color: var(--white-text);
     height: 70px;
     width: 200px;
-    border: 7px double rgba(191,255,255, 0.7);
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
     border-radius: 15px; 
-    background-color: #204040;
+    background-color: var(--dark-bkg);
     font-size: 18px;
 }
 .log-register a {
-    color: white;
+    color: var(--white-text);
 }
 .log-register p:hover {
     transform: scale(1.08, 1.08);
-    background-color: rgba(57,115,115, 0.4);
+    background-color: rgba(var(--dark-bkg-rgb), 0.4);
 }
 input[type=submit], button {
-    color: white;
+    color: var(--white-text);
     height: 70px;
     width: 200px;
     font-size: 25px;
-    border: 7px double rgba(191,255,255, 0.7);
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
     border-radius: 15px; 
-    background-color: #204040;
+    background-color: var(--dark-bkg);
 }
 
 button:hover{
     transform: scale(1.08, 1.08);
-    background-color: rgba(57,115,115, 0.8);
+    background-color: rgba(var(--dark-bkg-rgb), 0.8);
 }
 
 input[type=text], input[type=email], input[type=password] {
-    border: 7px double rgba(15, 55, 99, 0.7);
+    border: 7px double var(--input-border);
     border-radius: 15px;
     width:300px;
     height:30px;
-    background-color: rgba(32,64,64, 0.6);
-    color: white;
+    background-color: rgba(var(--header-bkg-rgb), 0.6);
+    color: var(--white-text);
     font-size: 15px;
 
 }

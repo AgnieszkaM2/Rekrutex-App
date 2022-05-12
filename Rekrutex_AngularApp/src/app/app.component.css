@@ -1,6 +1,6 @@
 aside {
   width: 20%;
-  background: #60bfbf;
+  background: var(--content-bkg);
   position: fixed;
 
   display: flex;
@@ -18,8 +18,8 @@ aside {
   width: 105%;
   line-height: 50px;
   font-size: 32px;
-  color: #bfffff;
-  background: #397373;
+  color: var(--main-div-bkg);
+  background: var(--header-bkg);
   padding: 0px 10px;
   position: static;
   cursor: pointer;
@@ -43,18 +43,18 @@ aside ul li {
 }
 
 a:link {
-  color: #000000;
+  color: var(--text);
   text-decoration: none;
 }
 
 a:active {color: black;}
 
 a:visited {
-  color: #000000;
+  color: var(--text);
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--white-text);
 }
 
 input {
@@ -62,10 +62,24 @@ input {
 }
 
 #logout:hover {
-  color: #ffffff !important;
+  color: var(--white-text) !important;
 } 
 
 /* Toggler Functionality */
 input:checked ~ aside {
   left: -20%;
+}
+
+.styleButton {
+  top:5px;
+  margin-right: 2%;
+  float: right;
+  position: sticky;
+  color: var(--white-text);
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  border: 5px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border-radius: 10px; 
+  background-color: var(--content-bkg);
 }

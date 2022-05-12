@@ -20,19 +20,24 @@
       <br>
       <br />
 
-      <div class="przycisk_tlo" id="glowna_submit_tlo_left">
+      <div *ngIf="isUser==false" class="przycisk_tlo" id="glowna_submit_tlo_left">
         <div class="przycisk_cialo" id="glowna_submit_cialo">
           <input type="submit" id="glowna_zaloguj">
           <label for="glowna_zaloguj"><a routerLink="/logowanie" routerLinkActive="active">Zaloguj się</a></label>
         </div>
       </div>
 	  
-	  <div class="przycisk_tlo" id="glowna_submit_tlo_right">
+	  <div *ngIf="isUser==false" class="przycisk_tlo" id="glowna_submit_tlo_right">
         <div class="przycisk_cialo" id="glowna_submit_cialo">
           <input type="submit" id="glowna_rejestruj">
           <label for="glowna_rejestruj"><a routerLink="/rejestracja" routerLinkActive="active">Zarejestruj się</a></label>
         </div>
       </div>
+
+    <div *ngIf="isUser==true" align="center">
+      <h3 align="center">Przejdź do kategorii dostępnych stanowisk i quizu:</h3><br>
+      <button align="center" class="mainButton"><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></button><br>
+    </div>
   
   
     </div>

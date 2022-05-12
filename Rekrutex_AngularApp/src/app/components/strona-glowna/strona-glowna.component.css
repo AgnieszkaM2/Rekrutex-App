@@ -1,6 +1,6 @@
 #glowna_tlo {
   align-self: center;
-  background-color: #60bfbf;
+  background-color: var(--content-bkg);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -11,13 +11,13 @@
   width: 100%;
 }
 #glowna_cialo {
-  background-color: #bfffff;
+  background-color: var(--main-div-bkg);
   box-sizing: border-box;
   padding: 3%;
   font-family:Arial, Helvetica, sans-serif;
 }
 #glowna_naglowek_tlo {
-  background-color: #204040;
+  background-color: var(--dark-bkg);
   box-sizing: border-box;
   padding: 0.5%;
   width: 60%;
@@ -25,8 +25,8 @@
   position: relative;
 }
 #glowna_naglowek_cialo {
-  background-color: #397373;
-  color:#bfffff;
+  background-color: var(--header-bkg);
+  color:var(--main-div-bkg);
   box-sizing: border-box;
   font-weight: bold;
   padding:1px;
@@ -50,10 +50,10 @@
   right: 5%;
 }
 #glowna_submit_cialo {
-  background-color: #204040;
+  background-color: var(--dark-bkg);
   box-sizing: border-box;
   font-weight: bold;
-  color: white;
+  color: var(--white-text);
   padding-top: 0.5%;
   padding-bottom: 0.5%;
 }
@@ -65,12 +65,12 @@
 }
 
 #glowna_submit_tlo_left label {
-  color:black;
+  color:var(--text);
   display: inline-block;
   width:100%;
   margin: 0;
   /* background-color: #60bfbf; */
-  background-color: rgba(96,191,191,0.75);
+  background-color: rgba(var(--content-bkg-rgb),0.75);
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 30px;
@@ -80,11 +80,11 @@
 }
 
 #glowna_submit_tlo_left label:hover {
-  background-color: rgba(96,191,191,0.5);
+  background-color: rgba(var(--content-bkg-rgb),0.5);
 }
 
 #glowna_submit_tlo_left input[type="submit"]:active + label {
-  background-color: rgba(191,255,255,1);
+  background-color: rgba(var(--main-div-bkg-rgb),1);
 
 }
 
@@ -95,12 +95,12 @@
 }
 
 #glowna_submit_tlo_right label {
-  color:black;
+  color:var(--text);
   display: inline-block;
   width:100%;
   margin: 0;
   /* background-color: #60bfbf; */
-  background-color: rgba(96,191,191,0.75);
+  background-color: rgba(var(--content-bkg-rgb),0.75);
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
@@ -110,10 +110,20 @@
 }
 
 #glowna_submit_tlo_right label:hover {
-  background-color: rgba(96,191,191,0.5);
+  background-color: rgba(var(--content-bkg-rgb),0.5);
 }
 
 #glowna_submit_tlo_right input[type="submit"]:active + label {
-  background-color: rgba(191,255,255,1);
+  background-color: rgba(var(--main-div-bkg-rgb),1);
 
+}
+
+.mainButton {
+  color: var(--white-text);
+  height: 70px;
+  width: 200px;
+  font-size: 25px;
+  border: 5px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border-radius: 10px; 
+  background-color: var(--content-bkg);
 }

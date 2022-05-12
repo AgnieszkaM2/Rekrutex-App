@@ -1,7 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    
+
+}
+
 body {
     background-color: #bbdddd;
     font-family: Arial; 
+    --bkg-color:#bbdddd;
+    --main-div-bkg:#bfffff;
+    --main-div-bkg-rgb: 191,255,255;
+    --header-bkg:#397373;
+    --header-bkg-rgb:32,64,64;
+    --content-bkg:#60bfbf;
+    --content-bkg-rgb:96,191,191;
+    --dark-bkg:#204040;
+    --dark-bkg-rgb:57,115,115;
+    --popup-bkg:#204040e4;
+    --input-border:rgba(15, 55, 99, 0.7);
+    --a-hover-text:#ffffff;
+    --text:#000000;
+    --white-text:#ffffff; 
+
+}
+body.gray-scale {
+    background-color: #7e7e7e;
+    font-family: Arial; 
+    --bkg-color:#bbdddd;
+    --main-div-bkg:#d9d9d9;
+    --main-div-bkg-rgb:217,217,217;
+    --header-bkg:#737373;
+    --header-bkg-rgb:115,115,115;
+    --content-bkg:#a6a6a6;
+    --content-bkg-rgb:166,166,166;
+    --dark-bkg:#404040;
+    --dark-bkg-rgb:64,64,64;
+    --popup-bkg:#404040e4;
+    --input-border:rgba(78, 78, 78, 0.7);
+    --a-hover-text:#ffffff;
+    --text:#000000;
+    --white-text:#ffffff; 
 }
 a:link {
     color: #000000;
@@ -25,7 +63,7 @@ a {
 .main-div {
     height: 80%;
     width: 50%;
-    background-color: #bfffff;
+    background-color: var(--main-div-bkg);
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 10%;

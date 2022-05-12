@@ -1,6 +1,6 @@
 #formularz_tlo {
   align-self: center;
-  background-color: #60bfbf;
+  background-color: var(--content-bkg);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -11,13 +11,13 @@
   width: 100%;
 }
 #formularz_cialo {
-  background-color: #bfffff;
+  background-color: var(--main-div-bkg);
   box-sizing: border-box;
   padding: 3%;
   font-family:Arial, Helvetica, sans-serif;
 }
 #formularz_naglowek_tlo {
-  background-color: #204040;
+  background-color: var(--dark-bkg);
   box-sizing: border-box;
   padding: 0.5%;
   width: 60%;
@@ -25,19 +25,19 @@
   position: relative;
 }
 #formularz_naglowek_cialo {
-  background-color: #397373;
-  color:#bfffff;
+  background-color: var(--header-bkg);
+  color:var(--main-div-bkg);
   box-sizing: border-box;
   font-weight: bold;
   padding:1px;
 }
 #formularz_tresc_tlo {
-  background-color: #397373;
+  background-color: var(--header-bkg);
   box-sizing: border-box;
   padding: 0.5%;
 }
 #formularz_tresc_cialo {
-  background-color: #60bfbf;
+  background-color: var(--content-bkg);
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
@@ -68,14 +68,14 @@
 
 }
 #formularz_input_tlo {
-  background-color: #60bfbf;
+  background-color: var(--content-bkg);
   box-sizing: border-box;
   padding: 0.5%;
   height: 162px;
   position: relative;
 }
 #formularz_input_cialo {
-  background-color: #bfffff;
+  background-color: var(--main-div-bkg);
   box-sizing: border-box;
   position:relative;
   height:100%;
@@ -87,7 +87,7 @@
     text-align:center;
 }
 #formularz_upload_tlo {
-  background-color: #204040;
+  background-color: var(--dark-bkg);
   box-sizing: border-box;
   padding: 0.5%;
   width: 50%;
@@ -95,19 +95,19 @@
   position: relative;
 }
 #formularz_upload_cialo {
-  background-color: #397373;
+  background-color: var(--header-bkg);
   box-sizing: border-box;
   font-weight: bold;
   padding:5px;
 }
 #formularz_obrazek_tlo {
-  background-color: #bfffff;
+  background-color: var(--main-div-bkg);
   box-sizing: border-box;
   padding: 0.5%;
   text-align: center;
 }
 #formularz_obrazek_cialo {
-  background-color: #bfffff;
+  background-color: var(--main-div-bkg);
   box-sizing: border-box;
   border:solid gray 1px;
   height:120px;
@@ -125,10 +125,10 @@
   left: 35%;
 }
 #formularz_submit_cialo {
-  background-color: #204040;
+  background-color: var(--dark-bkg);
   box-sizing: border-box;
   font-weight: bold;
-  color: white;
+  color: var(--white-text);
   padding-top: 0.5%;
   padding-bottom: 0.5%;
 }
@@ -140,12 +140,12 @@
 }
 
 #formularz_submit_tlo label {
-  color:black;
+  color:var(--text);
   display: inline-block;
   width:100%;
   margin: 0;
   /* background-color: #60bfbf; */
-  background-color: rgba(96,191,191,0.75);
+  background-color: rgba(var(--content-bkg-rgb),0.75);
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 30px;
@@ -155,11 +155,11 @@
 }
 
 #formularz_submit_tlo label:hover {
-  background-color: rgba(96,191,191,0.5);
+  background-color: rgba(var(--content-bkg-rgb),0.5);
 }
 
 #formularz_submit_tlo input[type="submit"]:active + label {
-  background-color: rgba(191,255,255,1);
+  background-color: rgba(var(--main-div-bkg-rgb),1);
 
 }
 
@@ -170,12 +170,12 @@
 }
 
 #formularz_upload_tlo label {
-  color:black;
+  color:var(--text);
   display: inline-block;
   width:100%;
   margin: 0;
   /* background-color: #60bfbf; */
-  background-color: rgba(96,191,191,0.75);
+  background-color: rgba(var(--content-bkg-rgb),0.75);
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
@@ -185,11 +185,11 @@
 }
 
 #formularz_upload_tlo label:hover {
-  background-color: rgba(96,191,191,0.5);
+  background-color: rgba(var(--content-bkg-rgb),0.5);
 }
 
 #formularz_upload_tlo input[type="file"]:active + label {
-  background-color: rgba(191,255,255,1);
+  background-color: rgba(var(--main-div-bkg-rgb),1);
 
 }
 
