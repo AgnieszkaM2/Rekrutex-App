@@ -3,20 +3,38 @@
     <br>
     <div class="panel-header" align="center"><h1>Panel Administratora</h1><hr></div>
     <br>
-    <ul>
-        <li id="jeden" (click)="tabChange('jeden')">jeden</li>
-        <li id="dwa" (click)="tabChange('dwa')">dwa</li>
-    </ul>
-    <div>
-        <div class="content-value" *ngIf="id === 'jeden'">
-            <div class="zakladka-dodaj" align="center">
-                <button>Dodaj</button>
-            </div>
+    <a>
+        <div id="div1" (click)="tabChange('jeden')">
+            Dodanie pytania
         </div>
-        <div class="content-value" *ngIf="id === 'dwa'">
-            <div class="zakladka-usun" align="center">
-                <button>Usuń</button>
-            </div>
+    </a>
+    <a>
+        <div id="div2" (click)="tabChange('dwa')">
+            Usunięcie pytania
+        </div>
+    </a>
+    <a>
+        <div id="div3" (click)="tabChange('trzy')">
+            Wyświetlenie użytykowników
+        </div>
+    </a>
+    <a>
+        <div id="div4" (click)="tabChange('cztery')">
+            Wyświetlenie wszystkich pytań
+        </div>
+    </a>
+    <div class ="zakladka-admina">
+        <div class="content-value" *ngIf="id === 'jeden'" align="center">
+            <button>Dodaj</button>
+        </div>
+        <div class="content-value" *ngIf="id === 'dwa'" align="center">
+            <button>Usuń</button>
+        </div>
+        <div class="content-value" *ngIf="id === 'trzy'" align="center">
+            <button>Wyświetlenie</button>
+        </div>
+        <div class="content-value" *ngIf="id === 'cztery'" align="center">
+            <button>Wyświetlenie2</button>
         </div>
     </div>
 </div>

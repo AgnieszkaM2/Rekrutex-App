@@ -1,3 +1,35 @@
-/* .mat-tab-group {
-    margin-bottom: 48px;
-  } */
+body{
+  margin: 0;
+}
+#div1{
+  height: 50px;
+  width: 25%;
+  background-color: #00a3cc;
+  float: left;
+}
+#div1:hover,#div2:hover,#div3:hover,#div4:hover{
+  background-color: #00a3ff;
+}
+#div2{
+  height: 50px;
+  width: 25%;
+  background-color: #00a3cc;
+  float: left;
+}
+#div3{
+  height: 50px;
+  width: 25%;
+  background-color: #00a3cc;
+  float: left;
+}
+#div4{
+  height: 50px;
+  width: 25%;
+  background-color: #00a3cc;
+  float: left;
+}
+.zakladka-admina{
+  background-color:aquamarine;
+  width:100%;
+  float:right;
+}
