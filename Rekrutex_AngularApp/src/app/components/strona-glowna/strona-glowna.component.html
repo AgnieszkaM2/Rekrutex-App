@@ -21,22 +21,36 @@
       <br />
 
       <div *ngIf="isUser==false" class="przycisk_tlo" id="glowna_submit_tlo_left">
+        <a routerLink="/logowanie" routerLinkActive="active">
         <div class="przycisk_cialo" id="glowna_submit_cialo">
-          <input type="submit" id="glowna_zaloguj">
-          <label for="glowna_zaloguj"><a routerLink="/logowanie" routerLinkActive="active">Zaloguj się</a></label>
+          <input class="przycisk_input" type="submit" id="glowna_zaloguj">
+          <label class="przycisk_label" for="glowna_zaloguj">Zaloguj się</label>
         </div>
+        </a>
       </div>
 	  
 	  <div *ngIf="isUser==false" class="przycisk_tlo" id="glowna_submit_tlo_right">
+        <a routerLink="/rejestracja" routerLinkActive="active">
         <div class="przycisk_cialo" id="glowna_submit_cialo">
-          <input type="submit" id="glowna_rejestruj">
-          <label for="glowna_rejestruj"><a routerLink="/rejestracja" routerLinkActive="active">Zarejestruj się</a></label>
+          <input class="przycisk_input" type="submit" id="glowna_rejestruj">
+          <label class="przycisk_label" for="glowna_rejestruj">Zarejestruj się</label>
         </div>
+        </a>
       </div>
 
-    <div *ngIf="isUser==true" align="center">
-      <h3 align="center">Przejdź do kategorii dostępnych stanowisk i quizu:</h3><br>
-      <button align="center" class="mainButton"><a routerLink="/kategorie" routerLinkActive="active">Kategorie</a></button><br>
+    <div *ngIf="isUser==true"  align="center">
+      <h3 align="center">Przejdź do kategorii dostępnych stanowisk i quizu:</h3>
+      <br>
+      <div class="przycisk_tlo" id="glowna_submit_cialo" id="glowna_kategorie_tlo">
+      <a routerLink="/kategorie" routerLinkActive="active">
+        <div class="przycisk_cialo" id="glowna_submit_cialo">
+          <input class="przycisk_input" type="submit" id="glowna_kategorie" align="center" >
+          <label class="przycisk_label" for="glowna_kategorie">Kategorie</label>
+        </div>
+      </a>
+      </div>
+      <br>
+      
     </div>
   
   
