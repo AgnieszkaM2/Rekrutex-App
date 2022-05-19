@@ -1,3 +1,29 @@
+#rejestruj_tlo {
+  left: 0%;
+  width: 100%;
+}
+#rejestruj_cialo{
+  width:98%;
+}
+#rejestruj_naglowek_tlo{
+  padding: 0.5%;
+  width: 60%;
+  left: 20%;
+}
+#rejestruj_naglowek_cialo{
+  padding:1px;
+}
+#rejestruj_formularz_tlo{
+  width:80%;
+  left:10%;
+  position: relative;
+}
+#rejestruj_formularz_cialo{
+  height: 90%;
+  width: 100%;
+  background-color: var(--content-bkg);
+  position: relative;
+}
 .register-header{
     height: 90%;
     width: 90%;
