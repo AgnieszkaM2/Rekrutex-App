@@ -1,3 +1,55 @@
+#kategorie_tlo {
+  left: 0%;
+  width: 100%;
+}
+#kategorie_cialo{
+  width:98%;
+}
+#kategorie_naglowek_tlo{
+  padding: 0.5%;
+  width: 80%;
+  left: 10%;
+}
+#kategorie_naglowek_cialo{
+  padding:1px;
+}
+#kategorie_tresc_tlo{
+  width:80%;
+  left:10%;
+  position: relative;
+}
+#kategorie_tresc_cialo{
+  height: 90%;
+  width: 100%;
+  background-color: var(--content-bkg);
+}
+#kategorie_tresc_cialo .przycisk_label{
+    color: var(--white-text);
+    padding:4%;
+    width: 200px;
+    font-size: 25px;
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+    border-radius: 15px; 
+    background-color: var(--dark-bkg);
+    margin: 2%;
+    vertical-align: middle;
+}
+#kategorie_tresc_cialo .przycisk_label:hover{
+      transform: scale(1.08, 1.08);
+    background-color: rgba(var(--dark-bkg-rgb), 0.8);
+}
+#kategorie_tresc_cialo .przycisk_input{
+
+}
+#kategorie_tresc_cialo li{
+    width: 85%;
+    height: 40%;
+    background-color: rgba(var(--main-div-bkg-rgb), 0.5);
+    border: 7px double rgba(var(--dark-bkg-rgb), 1);
+    border-radius: 15px;
+    margin:2%;
+    list-style-type: none;
+}
 .category-header{
     height: 90%;
     width: 90%;
