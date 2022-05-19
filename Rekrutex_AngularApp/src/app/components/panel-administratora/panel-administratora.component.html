@@ -25,27 +25,63 @@
     </a>
     <div class ="zakladka-admina">
         <div class="content-value" *ngIf="id === 'jeden'" align="center">
+            <br>
+            <label>Kategoria: </label>
+            <select>
+                <option>Informatyk</option>
+                <option>Elektronik</option>
+            </select>
+            <hr width="50%">
+            <label>Treść pytania: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Odpowiedź 1: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Odpowiedź 2: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Odpowiedź 3: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Odpowiedź 4: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Poprawna odpowiedź: </label>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select><br>
             <button>Dodaj</button>
         </div>
         <div class="content-value" *ngIf="id === 'dwa'" align="center">
+            <br>
+            <label>Kategoria: </label>
+            <select>
+                <option>Informatyk</option>
+                <option>Elektronik</option>
+            </select>
+            <hr width="50%">
+            <label>Podaj pytanie: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            
             <button>Usuń</button>
         </div>
         <div class="content-value" *ngIf="id === 'trzy'" align="center">
-            <button>Wyświetlenie</button>
+            <label>Imię: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <label>Nazwisko: </label>
+            <input id="password" type="tekst" class="form-control" placeholder=""><br>
+            <button>Wyświetl</button>
         </div>
         <div class="content-value" *ngIf="id === 'cztery'" align="center">
-            <button>Wyświetlenie2</button>
+            <br>
+            <label>Kategoria: </label>
+            <select>
+                <option>Informatyk</option>
+                <option>Elektronik</option>
+            </select>
+            <hr width="50%">
+            <button>Wyświetl</button>
         </div>
     </div>
 </div>
 
 <br>
-<h1>Pomysły:</h1>
-<div>
-    <ol>
-        <li>Dodanie pytania do wybranej kategorii</li>
-        <li>Usunięcie pytania z wybranej kategorii</li>
-        <li>Wyświetlenie wszystkich pytań z danej kategorii (z odpowiedziami)</li>
-        <li>Wyświetlenie użytkowników (ile uzyskał punktów)</li>
-    </ol>
-</div>
