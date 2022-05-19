@@ -79,7 +79,7 @@ input:checked ~ aside {
   height: 50px;
   width: 150px;
   font-size: 20px;
-  border: 5px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border: 5px double rgba(var(--dark-bkg-rgb), 0.7);
   border-radius: 10px; 
   background-color: var(--content-bkg);
 }
