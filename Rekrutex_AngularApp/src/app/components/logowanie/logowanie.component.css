@@ -1,9 +1,21 @@
-.login-header{
-    height: 90%;
-    width: 90%;
+#logowanie_tlo {
+  left: 0%;
+  width: 100%;
+}
+#logowanie_cialo{
+  
+  width:98%;
+}
+#login_naglowek_tlo{
+    width: 60%;
+  left: 20%;
+}
+#login_naglowek_cialo{
+    padding:1px;
     background-color: var(--header-bkg);
     color: var(--main-div-bkg);
 }
+
 .login-form {
     height: 90%;
     width: 90%;

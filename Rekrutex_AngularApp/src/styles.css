@@ -59,13 +59,14 @@ a {
 .main-div {
     height: 80%;
     width: 50%;
-    background-color: var(--main-div-bkg);
+    /*background-color: var(--main-div-bkg);*/
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 10%;
     display: block;
     font-size: 20px;
     font-weight: 600;
+    
 
 }
 .okno_tlo{
@@ -78,6 +79,7 @@ a {
   padding: 0.5%;
   position: relative;
   text-align: center;
+  
 }
 .okno_cialo{
   background-color: var(--main-div-bkg);
@@ -98,15 +100,19 @@ a {
   color:var(--main-div-bkg);
   box-sizing: border-box;
   font-weight: bold;
-  
 }
 .tresc_tlo{
-  
-  
+  background-color: var(--header-bkg);
+  box-sizing: border-box;
+  padding: 0.5%;
 }
 .tresc_cialo{
-  
-  
+  background-color: var(--content-bkg);
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom:5px;
 }
 .input_tlo{
   
@@ -156,6 +162,10 @@ a {
 .przycisk_input:active + label{
   background-color: rgba(var(--main-div-bkg-rgb),1);
 }
+.przycisk_input:checked + label {
+  background-color: rgba(var(--main-div-bkg-rgb),1);
+
+}
 .obrazek_tlo{
   
   
@@ -169,8 +179,10 @@ a {
   
 }
 .tekst_cialo{
-  
-  
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom:5px;
 }
 .mainButton {
   color: var(--white-text);
