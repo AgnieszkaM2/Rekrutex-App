@@ -3,26 +3,31 @@
   width: 100%;
 }
 #logowanie_cialo{
-  
   width:98%;
 }
 #login_naglowek_tlo{
-    width: 60%;
+  padding: 0.5%;
+  width: 60%;
   left: 20%;
 }
 #login_naglowek_cialo{
-    padding:1px;
-    background-color: var(--header-bkg);
-    color: var(--main-div-bkg);
+  padding:1px;
 }
-
+#login_formularz_tlo{
+  width:80%;
+  left:10%;
+  position: relative;
+}
+#login_formularz_cialo{
+  height: 90%;
+  width: 100%;
+  background-color: var(--content-bkg);
+}
 .login-form {
     height: 90%;
     width: 90%;
     background-color: var(--content-bkg);
-
 }
-
 .loginResult {
     position: absolute;
     top:250px;
