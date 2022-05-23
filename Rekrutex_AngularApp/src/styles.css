@@ -152,7 +152,7 @@ a {
   padding-right: 30px;
   padding-top: 5px;
   padding-bottom:5px;
-  
+  cursor: pointer;
   border: 5px double var(--dark-bkg);
   border-radius: 10px; 
 }

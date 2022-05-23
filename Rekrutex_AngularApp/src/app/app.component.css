@@ -42,20 +42,6 @@ aside ul li {
   cursor: pointer;
 }
 
-a:link {
-  color: var(--text);
-  text-decoration: none;
-}
-
-a:active {color: black;}
-
-a:visited {
-  color: var(--text);
-}
-
-a:hover {
-  color: var(--white-text);
-}
 
 input {
   display: none;
