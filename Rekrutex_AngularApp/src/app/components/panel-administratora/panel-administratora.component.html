@@ -10,16 +10,11 @@
     </a>
     <a>
         <div id="div2" (click)="tabChange('dwa')">
-            Usunięcie pytania
-        </div>
-    </a>
-    <a>
-        <div id="div3" (click)="tabChange('trzy')">
             Wyświetlenie użytykowników
         </div>
     </a>
     <a>
-        <div id="div4" (click)="tabChange('cztery')">
+        <div id="div3" (click)="tabChange('trzy')">
             Wyświetlenie wszystkich pytań
         </div>
     </a>
@@ -53,25 +48,9 @@
         </div>
         <div class="content-value" *ngIf="id === 'dwa'" align="center">
             <br>
-            <label>Kategoria: </label>
-            <select>
-                <option>Informatyk</option>
-                <option>Elektronik</option>
-            </select>
-            <hr width="50%">
-            <label>Podaj pytanie: </label>
-            <input id="password" type="tekst" class="form-control" placeholder=""><br>
-            
-            <button>Usuń</button>
+            <label>Lista użytkowników:</label>
         </div>
         <div class="content-value" *ngIf="id === 'trzy'" align="center">
-            <label>Imię: </label>
-            <input id="password" type="tekst" class="form-control" placeholder=""><br>
-            <label>Nazwisko: </label>
-            <input id="password" type="tekst" class="form-control" placeholder=""><br>
-            <button>Wyświetl</button>
-        </div>
-        <div class="content-value" *ngIf="id === 'cztery'" align="center">
             <br>
             <label>Kategoria: </label>
             <select>
@@ -83,5 +62,4 @@
         </div>
     </div>
 </div>
-
 <br>
