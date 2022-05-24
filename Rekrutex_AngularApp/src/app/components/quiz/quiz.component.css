@@ -91,3 +91,60 @@
     padding-top: 5px;
     padding-bottom:5px;
 }
+
+.quizResult {
+  position: absolute;
+  top:250px;
+  height: 60%;
+  width: 60%;
+  background-color: var(--popup-bkg);
+  color: var(--white-text);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+  border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border-radius: 15px;
+
+}
+.log-register p {
+  color: var(--white-text);
+  height: 70px;
+  width: 200px;
+  border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border-radius: 15px; 
+  background-color: var(--dark-bkg);
+  font-size: 18px;
+}
+.log-register a {
+  color: var(--white-text);
+}
+.log-register p:hover {
+  transform: scale(1.08, 1.08);
+  background-color: rgba(var(--dark-bkg-rgb), 0.4);
+}
+.quizResult button:hover{
+  transform: scale(1.08, 1.08);
+  background-color: rgba(var(--dark-bkg-rgb), 0.8);
+}
+.quizResult button {
+  color: var(--white-text);
+  height: 70px;
+  width: 200px;
+  font-size: 25px;
+  border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+  border-radius: 15px; 
+  background-color: var(--dark-bkg);
+}
+
+/* .timer {
+  top:20px;
+  margin-right: 2%;
+  float: right;
+  position: sticky;
+  height: 200px;
+  width: 200px;
+  font-size: 20px;
+  border: 4px double rgba(var(--dark-bkg-rgb), 0.7);
+  border-radius: 10px; 
+  background-color: var(--content-bkg);
+} */

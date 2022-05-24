@@ -9,8 +9,9 @@ require 'connect.php';
 
 $resultdata=json_decode(file_get_contents("php://input"));
 if($resultdata!=null){
-    $wynik=$resultdata->wynik;
     $id=$resultdata->id;
+    $wynik=$resultdata->wynik;
+    
 
     $sql = "UPDATE uzytkownicy set wynik = '$wynik' where id_uzytkownicy = '$id'";
     if($result = mysqli_query($con,$sql))

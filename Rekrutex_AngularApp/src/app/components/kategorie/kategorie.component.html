@@ -15,8 +15,8 @@
           <ul>
             <div *ngFor='let category of categories'>
             <li align = "center" >
-            <a routerLink="/quiz" routerLinkActive="active">
-              <button class="przycisk_input" id="{{ category.kategoria }}" (click)="setCategory(category.kategoria)"></button>
+            <a routerLink="/quiz" routerLinkActive="active" (click)="setCategory(category.kategoria)">
+              <button class="przycisk_input" id="{{ category.kategoria }}" value="{{ category.kategoria}}"></button>
               <label class="przycisk_label" for="{{ category.kategoria }}">{{ category.kategoria }}</label>
             </a>
             </li>

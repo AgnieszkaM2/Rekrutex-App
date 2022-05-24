@@ -4,39 +4,39 @@
         
         <div class="naglowek_tlo" id="quiz_naglowek_tlo">
           <div class="naglowek_cialo" id="quiz_naglowek_cialo">
-            <h1>Pytanie 14/23:</h1>
+            <h1>Pytanie {{iterator+1}} / {{ShuffledArray.length}} :</h1>
           </div>
         </div>
         <br>
-        <form>
+        <form [formGroup]="quizForm" align="center" (ngSubmit)="submit()">
           <div class="tresc_tlo" id="quiz_pytanie_tlo">
              <div class="tresc_cialo" id="quiz_pytanie_cialo">
-              <h2>Skomplikowana treść pytania dla kandydata?</h2>
+              <h2>{{ShuffledArray[iterator].tresc}}</h2>
             </div>
           </div>
           <br>
           <div class="przycisk_tlo" id="quiz_odpowiedz_tlo">
              <div class="przycisk_cialo" id="quiz_odpowiedz_cialo">
-              <input class="przycisk_input" type="radio" id="odpowiedz_A" name="odpowiedzi" value="1">
-              <label class="przycisk_label" for="odpowiedz_A">A) Treść odpowiedzi</label>
+              <input class="przycisk_input" type="radio" id="odpowiedz_A" formControlName="odpowiedzi" name="odpowiedzi" value="1">
+              <label class="przycisk_label" for="odpowiedz_A">A) {{ShuffledArray[iterator].odp1}}</label>
             </div>
           </div>
           <div class="przycisk_tlo" id="quiz_odpowiedz_tlo">
              <div class="przycisk_cialo" id="quiz_odpowiedz_cialo">
-              <input class="przycisk_input" type="radio" id="odpowiedz_B" name="odpowiedzi" value="2">
-              <label class="przycisk_label" for="odpowiedz_B">B) Treść odpowiedzi</label>
+              <input class="przycisk_input" type="radio" id="odpowiedz_B" formControlName="odpowiedzi" name="odpowiedzi" value="2">
+              <label class="przycisk_label" for="odpowiedz_B">B) {{ShuffledArray[iterator].odp2}}</label>
             </div>
           </div>
           <div class="przycisk_tlo" id="quiz_odpowiedz_tlo">
              <div class="przycisk_cialo" id="quiz_odpowiedz_cialo">
-              <input class="przycisk_input" type="radio" id="odpowiedz_C" name="odpowiedzi" value="3">
-              <label class="przycisk_label" for="odpowiedz_C">C) Treść odpowiedzi</label> 
+              <input class="przycisk_input" type="radio" id="odpowiedz_C" formControlName="odpowiedzi" name="odpowiedzi" value="3">
+              <label class="przycisk_label" for="odpowiedz_C">C) {{ShuffledArray[iterator].odp3}}</label> 
             </div>
           </div>
           <div class="przycisk_tlo" id="quiz_odpowiedz_tlo">
              <div class="przycisk_cialo" id="quiz_odpowiedz_cialo">
-              <input class="przycisk_input" type="radio" id="odpowiedz_D" name="odpowiedzi" value="4">
-              <label class="przycisk_label" for="odpowiedz_D">D) Treść odpowiedzi</label> 
+              <input class="przycisk_input" type="radio" id="odpowiedz_D" formControlName="odpowiedzi" name="odpowiedzi" value="4">
+              <label class="przycisk_label" for="odpowiedz_D">D) {{ShuffledArray[iterator].odp4}}</label> 
             </div>
           </div>
           
@@ -45,19 +45,17 @@
             <div id="quiz_lewo">
               <div class="tekst_tlo" id="quiz_tekst_tlo">
                 <div class="tekst_cialo" id="quiz_tekst_cialo">
-                  <h2>Postęp: 0%</h2>
+                  <h2>Postęp: {{((iterator)/ShuffledArray.length)*100}}%</h2>
                 </div>
               </div>
             </div>
   
             <div id="quiz_prawo">
               <div class="przycisk_tlo" id="quiz_submit_tlo">
-                <a routerLink="/formularz-kontaktowy" routerLinkActive="active">
                 <div class="przycisk_cialo" id="quiz_submit_cialo">
                   <input class="przycisk_input" type="submit" id="quiz_dalej">
                   <label class="przycisk_label" for="quiz_dalej">DALEJ</label>
                 </div>
-                </a>
               </div>
             </div>
           </div>
@@ -66,3 +64,40 @@
       </div>
     </div>
 </div>
+
+<div class= "quizResult" align="center" *ngIf="isDone==true && hasPassed==true">
+  <h1 align="center">Ukończyłeś quiz z wynikiem:</h1>
+  <br>
+  <h2 align="center">{{wynik}} / {{ShuffledArray.length}}</h2>
+  <br>
+  <br>
+  <h2 align="center">Przejdź do formularza kontaktowego i wyślij nam swoje CV!</h2>
+  <br>
+  <div class="log-register" align="center">
+    <p align="center"><a routerLink="/formularz-kontaktowy" routerLinkActive="active" (click)="sendResult()">
+    <h2>Kontynuuj</h2>
+    </a>
+    </p>
+  </div>
+</div>
+<div class= "quizResult" align="center" *ngIf="isDone==true && hasPassed==false">
+  <h1 align="center">Ukończyłeś quiz z wynikiem:</h1>
+  <br>
+  <h2 align="center">{{wynik}} / {{ShuffledArray.length}}</h2>
+  <br>
+  <br>
+  <h2 align="center">Niestety twój wynik nie spełnia progu punktowego dla rekrutacji na to stanowisko</h2>
+  <br>
+  <div class="log-register" align="center">
+    <p align="center">
+      <button (click)="goBack()">Zakończ</button>
+    </p>
+  </div>
+</div>
+
+<!-- <div class="timer" *ngIf="timer == 0?addAnswer(0):false">
+  <h4 align="center">Pozostały czas: </h4>
+  <br>
+  <h4 align="center">{{timer}} s</h4>
+  <br>
+</div> -->
