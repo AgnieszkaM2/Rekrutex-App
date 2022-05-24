@@ -21,7 +21,7 @@ body{
 #div3{
   color: var(--white-text);
   height: 50px;
-  width: 33%;
+  width: 34%;
   background-color: var(--dark-bkg);
   float: left;
 }
