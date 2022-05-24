@@ -1,12 +1,13 @@
 aside {
   width: 20%;
-  background: var(--content-bkg);
+  background: rgba(var(--content-bkg-rgb),0.35);
   position: fixed;
-
+  left:-0.25%;
   display: flex;
   flex-direction: column;
   overflow-wrap: break-word;
 }
+
 
 .aside-wrapper {
   padding: 0px 0px;
@@ -15,29 +16,101 @@ aside {
 }
 
 .logo {
-  width: 105%;
+  width: 125%;
+  left:-5%;
   line-height: 50px;
   font-size: 32px;
   color: var(--main-div-bkg);
   background: var(--header-bkg);
-  padding: 0px 10px;
+  padding: 5px 10px;
   position: static;
   cursor: pointer;
+  
+  border: 5px double var(--dark-bkg);
+  border-left: none;
+  border-radius: 10px;
+}
+#menu_header{
+  
+  
+}
+#menu_witaj_tlo{
+  left:-5%;
+  
+  width:120%;
+}
+#menu_przycisk_tlo_SG,#menu_przycisk_tlo_KAT,#menu_przycisk_tlo_LOG,#menu_przycisk_tlo_WYLOG {
+  left:-5%;
+  width:110%;
+  text-align: center;
+  z-index: auto;
+  position:relative;
+}
+#menu_przycisk_tlo_SG :hover{
+  transform: scale(1.1);
+  z-index: 10;
+  
+}
+#menu_przycisk_tlo_SG :hover label{
+  background: var(--main-div-bkg);
+}
+
+#menu_przycisk_tlo_KAT :hover{
+  transform: scale(1.1);
+  z-index: 10;
+}
+#menu_przycisk_tlo_KAT :hover label{
+  background: var(--main-div-bkg);
+}
+
+#menu_przycisk_tlo_LOG :hover{
+  transform: scale(1.1);
+  z-index: 10;
+}
+#menu_przycisk_tlo_LOG :hover label{
+  background: var(--main-div-bkg);
+}
+
+#menu_przycisk_tlo_WYLOG :hover{
+  transform: scale(1.1);
+  z-index: 10;
+}
+#menu_przycisk_tlo_WYLOG :hover label{
+  background: var(--main-div-bkg);
+}
+
+.menu_label :hover{
+  background-color: red;
+}
+
+.menu_label{
+  background: var(--light-bkg);
+  padding:15px;
+}
+#menu_witaj_label{
+  background: var(--content-bkg);
+}
+
+.przycisk_tlo{
+  padding:0px;
+  margin: 0px;
 }
 
 aside ul {
   padding-inline-start: 0;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
+  border-bottom: 0px solid;
+  border-top: 0px solid;
   border-color: #000000;
+  margin:0px;
 }
 
 aside ul li {
   list-style: none;
   font-size: 20px;
-  padding: 20px 10px;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
+  padding: 1px 10px;
+  margin:0px;
+  border-bottom: 0px solid;
+  border-top: 0px solid;
   border-color: #000000;
   cursor: pointer;
 }
@@ -52,8 +125,11 @@ input {
 } 
 
 /* Toggler Functionality */
-input:checked ~ aside {
-  left: -20%;
+#toggler:checked ~ aside {
+  left: -22%;
+}
+#toggler:hover ~ aside {
+  left:-0.25%;
 }
 
 .styleButton {
@@ -68,4 +144,12 @@ input:checked ~ aside {
   border: 5px double rgba(var(--dark-bkg-rgb), 0.7);
   border-radius: 10px; 
   background-color: var(--content-bkg);
+}
+
+#logged_user{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0px;
+  
 }

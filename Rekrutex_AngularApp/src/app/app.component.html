@@ -10,51 +10,58 @@
 <input type="checkbox" id="toggler" />
 <aside class="aside-wrapper">
   <label for="toggler">
-	<div class="logo"> 
-		REKRUTEX
-	</div>
+    <div class="logo" id="menu_header"> 
+      REKRUTEX
+    </div>
   </label>
   <ul>
-    <li *ngIf="isUser" >{{user.Name}} {{user.LastName}}</li>
+    <li *ngIf="isUser" id="logged_user">
+      <div class="przycisk_tlo" id="menu_witaj_tlo">
+        <div class="przycisk_cialo" id="menu_witaj_cialo">
+          <label class="przycisk_label menu_label" id="menu_witaj_label">Witaj {{user.Name}} {{user.LastName}}!</label>
+        </div>
+      </div>
+    </li>
     <li>
-	<div class="przycisk_tlo" id="menu_przycisk_tlo_SG">
-		<div class="przycisk_cialo" id="menu_przycisk_cialo_SG">
-			<a routerLink="/strona-glowna" routerLinkActive="active">
-				<input class="przycisk_input" type="submit" id="menu_glowna">
-				<label class="przycisk_label" for="menu_glowna">STRONA GŁÓWNA</label>
-			</a>
-		</div>
-	</div>
-	</li>
-	<li>
-	<div class="przycisk_tlo" id="menu_przycisk_tlo_KAT">
-		<div class="przycisk_cialo" id="menu_przycisk_cialo_KAT">
-			<a routerLink="/kategorie" routerLinkActive="active">
-				<input class="przycisk_input" type="submit" id="menu_kategorie">
-				<label class="przycisk_label" for="menu_kategorie">KATEGORIE</label>
-			</a>
-		</div>
-	</div>
-	</li>
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_SG">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_SG">
+          <a routerLink="/strona-glowna" routerLinkActive="active">
+            <input class="przycisk_input" type="submit" id="menu_glowna">
+            <label class="przycisk_label menu_label" id="menu_przycisk_label_SG" for="menu_glowna">STRONA GŁÓWNA</label>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_KAT">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_KAT">
+          <a routerLink="/kategorie" routerLinkActive="active">
+            <input class="przycisk_input" type="submit" id="menu_kategorie">
+            <label class="przycisk_label menu_label" id="menu_przycisk_label_KAT" for="menu_kategorie">KATEGORIE</label>
+          </a>
+        </div>
+      </div>
+    </li>
     <li *ngIf="isUser==false">
-	<div class="przycisk_tlo" id="menu_przycisk_tlo_LOG">
-		<div class="przycisk_cialo" id="menu_przycisk_cialo_LOG">
-			<a routerLink="/logowanie" routerLinkActive="active">
-				<input class="przycisk_input" type="submit" id="menu_logowanie">
-				<label class="przycisk_label" for="menu_kategorie">LOGOWANIE</label>
-			</a>
-		</div>
-	</div>
-	</li>
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_LOG">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_LOG">
+          <a routerLink="/logowanie" routerLinkActive="active">
+            <input class="przycisk_input" type="submit" id="menu_logowanie">
+            <label class="przycisk_label menu_label" id="menu_przycisk_label_LOG" for="menu_logowanie">LOGOWANIE</label>
+          </a>
+        </div>
+      </div>
+    </li>
     <li id="logout" *ngIf="isUser" (click)="logout()">
-	<div class="przycisk_tlo" id="menu_przycisk_tlo_LOG">
-		<div class="przycisk_cialo" id="menu_przycisk_cialo_LOG">
-			
-				<input class="przycisk_input" type="submit" id="menu_logowanie">
-				<label class="przycisk_label" for="menu_kategorie">LOGOWANIE</label>
-			
-		</div>
-	</div></li>
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_WYLOG">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_WYLOG">
+          
+          <input class="przycisk_input" type="submit" id="menu_wylogowania">
+          <label class="przycisk_label menu_label" id="menu_przycisk_label_WYLOG" for="menu_wylogowania">WYLOGUJ</label>
+        
+        </div>
+      </div>
+    </li>
   </ul>
   
 </aside>

@@ -13,6 +13,8 @@ body {
     --header-bkg-rgb:32,64,64;
     --content-bkg:#60bfbf;
     --content-bkg-rgb:96,191,191;
+    --light-bkg:#87DCDC;
+    --light-bkg-rgb:135,220,220;
     --dark-bkg:#204040;
     --dark-bkg-rgb:57,115,115;
     --popup-bkg:#204040e4;
@@ -32,6 +34,8 @@ body.gray-scale {
     --header-bkg-rgb:115,115,115;
     --content-bkg:#a6a6a6;
     --content-bkg-rgb:166,166,166;
+    --light-bkg:#B3B3B3;
+    --light-bkg-rgb:179,179,179;
     --dark-bkg:#404040;
     --dark-bkg-rgb:64,64,64;
     --popup-bkg:#404040e4;
