@@ -2,28 +2,31 @@ body{
   margin: 0;
 }
 #div1{
+  color: var(--white-text);
   height: 50px;
-  width: 34%;
-  background-color: #00a3cc;
+  width: 33%;
+  background-color: var(--dark-bkg);
   float: left;
 }
 #div1:hover,#div2:hover,#div3:hover,#div4:hover{
-  background-color: #00a3ff;
+  background-color: rgba(var(--dark-bkg-rgb), 0.4);
 }
 #div2{
+  color: var(--white-text);
   height: 50px;
   width: 33%;
-  background-color: #00a3cc;
+  background-color: var(--dark-bkg);
   float: left;
 }
 #div3{
+  color: var(--white-text);
   height: 50px;
   width: 33%;
-  background-color: #00a3cc;
+  background-color: var(--dark-bkg);
   float: left;
 }
 .zakladka-admina{
-  background-color:aquamarine;
+  background-color:var(--content-bkg);
   width:100%;
   float:right;
 }
