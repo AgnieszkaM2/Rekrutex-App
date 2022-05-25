@@ -1,4 +1,4 @@
-<div class="main-div" align="center">
+<div class="main-div" align="center" *ngIf="isLogged==true">
     <div class="okno_tlo" id="quiz_tlo">
       <div class="okno_cialo" id="quiz_cialo">
         
@@ -91,6 +91,21 @@
   <div class="log-register" align="center">
     <p align="center">
       <button (click)="goBack()">Zakończ</button>
+    </p>
+  </div>
+</div>
+
+<div class= "quizResult" align="center" *ngIf="isLogged==false">
+  <br>
+  <h1 align="center">Quiz niedostępny dla niezalogowanych użytkowników!</h1>
+  <br>
+  <br>
+  <h2 align="center">Przejdź do logowania:</h2>
+  <br>
+  <div class="log-register" align="center">
+    <p align="center"><a routerLink="/logowanie" routerLinkActive="active">
+    <h2>Zaloguj się</h2>
+    </a>
     </p>
   </div>
 </div>

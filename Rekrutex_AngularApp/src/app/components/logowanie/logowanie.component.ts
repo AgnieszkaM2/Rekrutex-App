@@ -24,6 +24,7 @@ export class LogowanieComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   get userLogin() {
@@ -37,7 +38,7 @@ export class LogowanieComponent implements OnInit {
   }
 
   redirecting: boolean=false;
-  timer = 5;
+  timer = 3;
   interval;
   
   redirect(){
@@ -52,7 +53,7 @@ export class LogowanieComponent implements OnInit {
       if(this.timer > 0) {
         this.timer--;
       } else {
-        this.timer = 5;
+        this.timer = 3;
       }
     },1000)
   }
@@ -72,7 +73,7 @@ login() {
       setTimeout(() => {
         this.redirecting=true;
         this.redirect(); 
-      }, 5000);  //5s  
+      }, 3000);  //5s  
       
     },
     (error) => {
