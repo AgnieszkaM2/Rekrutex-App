@@ -22,7 +22,9 @@ export class PytaniaTestService {
   readonly getCategoryPath = this.BaseURL + "/kategorie.php";
   readonly getQuestionsPath = this.BaseURL + "/pytania.php";
   readonly resultPath = this.BaseURL + "/wynik.php";
-
+  readonly uzytkownicy = this.BaseURL + "/uzytkownicyPanel.php";
+  readonly pytania = this.BaseURL + "/pytaniaPanel.php";
+  readonly dodanie = this.BaseURL + "/dodaniePanel.php";
   //funkcja wykonująca zapytanie do api i zwracająca jego wynik
   getTestQuestion() {
     return this.http.get<Pytanie[]>(this.getTestQuestionPath);
@@ -33,6 +35,10 @@ export class PytaniaTestService {
   }
 
   getCategories() {
+    return this.http.get(this.getCategoryPath);
+  }
+
+  getUsers(){
     return this.http.get(this.getCategoryPath);
   }
 
