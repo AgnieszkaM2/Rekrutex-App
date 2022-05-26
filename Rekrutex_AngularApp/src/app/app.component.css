@@ -1,5 +1,5 @@
 aside {
-  width: 20%;
+  width: 15%;
   background: rgba(var(--content-bkg-rgb),0.35);
   position: fixed;
   left:-0.25%;
@@ -16,7 +16,7 @@ aside {
 }
 
 .logo {
-  width: 125%;
+  width: 120%;
   left:-5%;
   line-height: 50px;
   font-size: 32px;
@@ -37,17 +37,17 @@ aside {
 #menu_witaj_tlo{
   left:-5%;
   
-  width:120%;
+  width:115%;
 }
 #menu_przycisk_tlo_SG,#menu_przycisk_tlo_KAT,#menu_przycisk_tlo_LOG,#menu_przycisk_tlo_WYLOG {
   left:-5%;
-  width:110%;
+  width:115%;
   text-align: center;
   z-index: auto;
   position:relative;
 }
 #menu_przycisk_tlo_SG :hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 10;
   
 }
@@ -56,7 +56,7 @@ aside {
 }
 
 #menu_przycisk_tlo_KAT :hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 10;
 }
 #menu_przycisk_tlo_KAT :hover label{
@@ -64,7 +64,7 @@ aside {
 }
 
 #menu_przycisk_tlo_LOG :hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 10;
 }
 #menu_przycisk_tlo_LOG :hover label{
@@ -72,7 +72,7 @@ aside {
 }
 
 #menu_przycisk_tlo_WYLOG :hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 10;
 }
 #menu_przycisk_tlo_WYLOG :hover label{
@@ -126,11 +126,12 @@ input {
 
 /* Toggler Functionality */
 #toggler:checked ~ aside {
-  left: -22%;
+  left: -15%;
 }
+/*
 #toggler:hover ~ aside {
   left:-0.25%;
-}
+}*/
 
 .styleButton {
   top:5px;
