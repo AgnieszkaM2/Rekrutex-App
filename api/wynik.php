@@ -9,6 +9,8 @@ require 'connect.php';
 
 $resultdata=json_decode(file_get_contents("php://input"));
 if($resultdata!=null){
+    
+    
     $id=$resultdata->id;
     $wynik=$resultdata->wynik;
     

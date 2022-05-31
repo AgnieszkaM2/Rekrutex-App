@@ -47,8 +47,9 @@ export class FormularzKontaktowyComponent implements OnInit {
     this.setCurrentUser();
   }
   submit(){
-    console.log(this.cvForm.value.cv_tresc);
-    console.log(this.cvForm.value.cv_plik);
+    //console.log(this.cvForm.value.cv_tresc);
+    //console.log(this.cvForm.value.cv_plik);
+    this.sendResult();
   }
   
   sendResult() {

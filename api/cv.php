@@ -7,6 +7,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 require 'connect.php';
 
+//http_response_code(404);
+
 $resultdata=json_decode(file_get_contents("php://input"));
 if($resultdata!=null){
     /*
@@ -31,7 +33,7 @@ if($resultdata!=null){
     $tresc=$resultdata->tresc;
     $plik=$resultdata->plik;
     
-    $myfile=fopen("testCV.txt","w");
+    $myfile=fopen("../CV/testCV.txt","w");
     fwrite($myfile,$id);
     fwrite($myfile,$f_name);
     fwrite($myfile,$l_name);
@@ -40,7 +42,7 @@ if($resultdata!=null){
     fwrite($myfile,"\n");
     fwrite($myfile,$plik);
     fclose($myfile);
-    
+    /*
     $sql = "insert into test_table (id_test,int_test,string_test,bool_test) values (3,12,'dwanascie',true);";
     if($result = mysqli_query($con,$sql))
     {
@@ -49,7 +51,7 @@ if($resultdata!=null){
     }else
     {
         http_response_code(404);
-    } 
+    } */
     
 }
 ?>
