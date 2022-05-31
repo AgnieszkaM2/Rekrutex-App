@@ -1,65 +1,80 @@
 <br>
 <div class="main-div" align="center">
-    <br>
-    <div class="panel-header" align="center"><h1>Panel Administratora</h1><hr></div>
-    <br>
-    <a>
-        <div id="div1" (click)="tabChange('jeden')">
-            Dodanie pytania
+  <div class="okno_tlo" id="panel_okno_tlo">
+    <div class="okno_cialo" id="panel_okno_cialo">
+      <div class="naglowek_tlo" id="panel_naglowek_tlo">
+        <div class="naglowek_cialo" id="panel_naglowek_cialo">
+          <h1>Panel Administratora</h1>
         </div>
-    </a>
-    <a>
-        <div id="div2" (click)="tabChange('dwa')">
-            Wyświetlenie użytykowników
+      </div>
+      <hr>
+      <div class="naglowek_tlo" id="panel_opcje_tlo">
+          <a>
+            <div class="naglowek_cialo" id="opcja_1" (click)="tabChange('jeden')">
+                Dodanie pytania
+            </div>
+          </a>
+          <a>
+            <div class="naglowek_cialo" id="opcja_2" (click)="tabChange('dwa')">
+                Wyświetlenie użytykowników
+            </div>
+          </a>
+          <a>
+            <div class="naglowek_cialo" id="opcja_3" (click)="tabChange('trzy')">
+                Wyświetlenie wszystkich pytań
+            </div>
+          </a>
+      </div>
+      
+      <div class="tresc_tlo" id="panel_tresc_tlo">
+        <div class="tresc_cialo" id="panel_tresc_cialo">
+          <br>
+          <div class ="zakladka-admina">
+            <div class="content-value" *ngIf="id === 'jeden'" align="center">
+                <label>Kategoria: </label>
+                <select>
+                    <option>Informatyk</option>
+                    <option>Elektronik</option>
+                </select>
+                <hr width="50%">
+                <label>Treść pytania: </label>
+                <input id="odp1" type="tekst" class="form-control" placeholder=""><br>
+                <label>Odpowiedź 1: </label>
+                <input id="odp2" type="tekst" class="form-control" placeholder=""><br>
+                <label>Odpowiedź 2: </label>
+                <input id="odp3" type="tekst" class="form-control" placeholder=""><br>
+                <label>Odpowiedź 3: </label>
+                <input id="odp4" type="tekst" class="form-control" placeholder=""><br>
+                <label>Odpowiedź 4: </label>
+                <input id="password" type="tekst" class="form-control" placeholder=""><br>
+                <label>Poprawna odpowiedź: </label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select><br>
+                <button>Dodaj</button>
+            </div>
+            <div class="content-value" *ngIf="id === 'dwa'" align="center">
+                <label>Lista użytkowników:</label>
+            </div>
+            <div class="content-value" *ngIf="id === 'trzy'" align="center">
+                <label>Kategoria: </label>
+                <select>
+                    <option>Informatyk</option>
+                    <option>Elektronik</option>
+                </select>
+                <hr width="50%">
+                <button>Wyświetl</button>
+            </div>
         </div>
-    </a>
-    <a>
-        <div id="div3" (click)="tabChange('trzy')">
-            Wyświetlenie wszystkich pytań
+          
         </div>
-    </a>
-    <div class ="zakladka-admina">
-        <div class="content-value" *ngIf="id === 'jeden'" align="center">
-            <br>
-            <label>Kategoria: </label>
-            <select>
-                <option>Informatyk</option>
-                <option>Elektronik</option>
-            </select>
-            <hr width="50%">
-            <label>Treść pytania: </label>
-            <input id="odp1" type="tekst" class="form-control" placeholder=""><br>
-            <label>Odpowiedź 1: </label>
-            <input id="odp2" type="tekst" class="form-control" placeholder=""><br>
-            <label>Odpowiedź 2: </label>
-            <input id="odp3" type="tekst" class="form-control" placeholder=""><br>
-            <label>Odpowiedź 3: </label>
-            <input id="odp4" type="tekst" class="form-control" placeholder=""><br>
-            <label>Odpowiedź 4: </label>
-            <input id="password" type="tekst" class="form-control" placeholder=""><br>
-            <label>Poprawna odpowiedź: </label>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select><br>
-            <button>Dodaj</button>
-        </div>
-        <div class="content-value" *ngIf="id === 'dwa'" align="center">
-            <br>
-            <label>Lista użytkowników:</label>
-        </div>
-        <div class="content-value" *ngIf="id === 'trzy'" align="center">
-            <br>
-            <label>Kategoria: </label>
-            <select>
-                <option>Informatyk</option>
-                <option>Elektronik</option>
-            </select>
-            <hr width="50%">
-            <button>Wyświetl</button>
-        </div>
+      </div>
+      
     </div>
+  </div>
+    
 </div>
 <br>
