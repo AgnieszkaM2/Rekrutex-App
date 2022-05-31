@@ -30,6 +30,10 @@ aside {
   border-left: none;
   border-radius: 10px;
   vertical-align: middle;
+  
+  content: "";
+  clear: both;
+  display: table;
 }
 #menu_header{
   
