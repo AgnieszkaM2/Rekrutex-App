@@ -23,21 +23,21 @@
       
       <br>
       <br />
+      <form [formGroup]="cvForm" (ngSubmit)="submit()">
       <div id="formularz_interakcja">
         
         <div id="formularz_lewo">
           <div class="input_tlo" id="formularz_input_tlo">
             <div class="input_cialo" id="formularz_input_cialo">
-              <input id="formularz_textbox" type="text" placeholder="Powiedz nam więcej!">
+              <input id="formularz_textbox" formControlName="cv_tresc" type="text" placeholder="Powiedz nam więcej!">
             </div>
           </div>
           <br />
         </div>
-  
         <div id="formularz_prawo">
           <div class="przycisk_tlo" id="formularz_upload_tlo">
             <div class="przycisk_cialo" id="formularz_upload_cialo">
-              <input class="przycisk_input" type="file" id="formularz_upload">
+              <input class="przycisk_input" formControlName="cv_plik" type="file" id="formularz_upload">
               <label class="przycisk_label" for="formularz_upload">WYBIERZ PLIK</label>
             </div>
           </div>
@@ -57,7 +57,7 @@
           <label class="przycisk_label" for="formularz_aplikuj">APLIKUJ!</label>
         </div>
       </div>
-  
+      </form>
   
     </div>
   </div>

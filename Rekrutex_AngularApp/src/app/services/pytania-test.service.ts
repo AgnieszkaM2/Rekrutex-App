@@ -22,6 +22,7 @@ export class PytaniaTestService {
   readonly getCategoryPath = this.BaseURL + "/kategorie.php";
   readonly getQuestionsPath = this.BaseURL + "/pytania.php";
   readonly resultPath = this.BaseURL + "/wynik.php";
+  readonly cvPath = this.BaseURL + "/cv.php";
   readonly uzytkownicy = this.BaseURL + "/uzytkownicyPanel.php";
   readonly pytania = this.BaseURL + "/pytaniaPanel.php";
   readonly dodanie = this.BaseURL + "/dodaniePanel.php";
@@ -49,7 +50,9 @@ export class PytaniaTestService {
   sendResult(data): Observable<any> {
     return this.http.post(this.resultPath, data);
   }
-
+  sendCvResult(data): Observable<any> {
+    return this.http.post(this.cvPath, data);
+  }
 
 }
 
