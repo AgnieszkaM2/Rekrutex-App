@@ -31,30 +31,57 @@
           <br>
           <div class ="zakladka-admina">
             <div class="content-value" *ngIf="id === 'jeden'" align="center">
-                <label>Kategoria: </label>
-                <select>
-                    <option>Informatyk</option>
-                    <option>Elektronik</option>
-                </select>
-                <hr width="50%">
-                <label>Treść pytania: </label>
-                <input id="odp1" type="tekst" class="form-control" placeholder=""><br>
-                <label>Odpowiedź 1: </label>
-                <input id="odp2" type="tekst" class="form-control" placeholder=""><br>
-                <label>Odpowiedź 2: </label>
-                <input id="odp3" type="tekst" class="form-control" placeholder=""><br>
-                <label>Odpowiedź 3: </label>
-                <input id="odp4" type="tekst" class="form-control" placeholder=""><br>
-                <label>Odpowiedź 4: </label>
-                <input id="password" type="tekst" class="form-control" placeholder=""><br>
-                <label>Poprawna odpowiedź: </label>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select><br>
-                <button>Dodaj</button>
+                <table id="dodanie_pytana">
+                  <tr>
+                    <td><label>Kategoria: </label></td>
+                    <td>
+                      <select>
+                        <option>Informatyk</option>
+                        <option>Elektronik</option>
+                      </select>
+                    </td>
+                  </tr>
+                  
+                <hr width="100%">
+                  <tr>
+                    <td><label>Treść pytania: </label></td>
+                    <td><input id="tresc_pytania" type="text" class="form-control" placeholder=""><br></td>
+                  </tr>
+                  <tr>
+                    <td><label>Odpowiedź 1: </label></td>
+                    <td><input id="odp1" type="text" class="form-control" placeholder=""><br></td>
+                  </tr>
+                  <tr>
+                    <td><label>Odpowiedź 2: </label></td>
+                    <td><input id="odp2" type="text" class="form-control" placeholder=""><br></td>
+                  </tr>
+                  <tr>
+                    <td><label>Odpowiedź 3: </label></td>
+                    <td><input id="odp3" type="text" class="form-control" placeholder=""><br></td>
+                  </tr>
+                  <tr>
+                    <td><label>Odpowiedź 4: </label></td>
+                    <td><input id="odp4" type="text" class="form-control" placeholder=""><br></td>
+                  </tr>
+                  <hr>
+                  <tr>
+                    <td><label>Poprawna: </label></td>
+                    <td><select>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                  </select></td>
+                  </tr>
+                  
+                  <br>
+                </table>
+                <div class="przycisk_tlo" id="panel_dodaj_tlo">
+                  <div class="przycisk_cialo" id="panel_dodaj_cialo">
+                    <input class="przycisk_input" type="submit" id="panel_dodaj_pytanie">
+                    <label class="przycisk_label" id="panel_dodaj_label" for="panel_dodaj_pytanie">Dodaj</label>
+                  </div>
+                </div>
             </div>
             <div class="content-value" *ngIf="id === 'dwa'" align="center">
                 <label>Lista użytkowników:</label>
@@ -66,7 +93,12 @@
                     <option>Elektronik</option>
                 </select>
                 <hr width="50%">
-                <button>Wyświetl</button>
+                <div class="przycisk_tlo" id="panel_wyswietl_tlo">
+                  <div class="przycisk_cialo" id="panel_wyswietl_cialo">
+                    <input class="przycisk_input" type="submit" id="panel_wyswietl_pytania">
+                    <label class="przycisk_label" id="panel_wyswietl_label" for="panel_wyswietl_pytania">Wyświetl</label>
+                  </div>
+                </div>
             </div>
         </div>
           

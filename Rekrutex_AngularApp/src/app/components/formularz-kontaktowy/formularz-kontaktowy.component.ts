@@ -13,6 +13,7 @@ import { PytaniaTestService } from 'src/app/services/pytania-test.service';
 export class FormularzKontaktowyComponent implements OnInit {
 
   cvForm: FormGroup;
+  chosenCategory: any;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private pytania: PytaniaTestService,private auth: AuthService, private router: Router) {
     this.cvForm = this.fb.group(
@@ -45,6 +46,7 @@ export class FormularzKontaktowyComponent implements OnInit {
   
   ngOnInit(): void {
     this.setCurrentUser();
+    this.chosenCategory=sessionStorage.getItem('category');
   }
   submit(){
     //console.log(this.cvForm.value.cv_tresc);
@@ -60,7 +62,8 @@ export class FormularzKontaktowyComponent implements OnInit {
       f_name: this.user.Name,
       l_name: this.user.LastName,
       tresc: this.cvForm.value.cv_tresc,
-      plik: this.cvForm.value.cv_plik
+      plik: this.cvForm.value.cv_plik,
+      kategoria: this.chosenCategory
     };
     
     this.pytania.sendCvResult(resultData).subscribe(

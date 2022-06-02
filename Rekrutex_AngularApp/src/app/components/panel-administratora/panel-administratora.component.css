@@ -85,3 +85,39 @@ line-height: 25px;
   width:100%;
   float:right;
 }
+input[type=textarea],input[type=text], input[type=password]{
+  border: 7px double var(--input-border);
+  border-radius: 15px;
+  width:300px;
+  height:30px;
+  background-color: rgba(var(--header-bkg-rgb), 0.6);
+  color: var(--white-text);
+  font-size: 15px;
+  padding-left:10px;
+  padding-right:10px;
+}
+td{
+  border: solid var(--content-bkg) 1px;
+}
+select,option{
+  padding:5px;
+  background: red;
+  font-size: 15px;
+  border: 7px double var(--input-border);
+  border-radius: 15px;
+  background-color: rgba(var(--header-bkg-rgb), 0.6);
+  color: var(--white-text);
+}
+
+#panel_dodaj_tlo {
+  width:25%;
+}
+#panel_wyswietl_tlo{
+  width:30%;
+}
+#panel_dodaj_cialo {
+  font-size:20pt;
+}
+#panel_dodaj_label{
+  
+}
