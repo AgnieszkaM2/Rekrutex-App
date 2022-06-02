@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpRequest,HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {Pytanie} from '../_models/pytania'
@@ -22,7 +22,8 @@ export class PytaniaTestService {
   readonly getCategoryPath = this.BaseURL + "/kategorie.php";
   readonly getQuestionsPath = this.BaseURL + "/pytania.php";
   readonly resultPath = this.BaseURL + "/wynik.php";
-  readonly cvPath = this.BaseURL + "/cv.php";
+  readonly cv_email_Path = this.BaseURL + "/cv_email.php";
+  readonly cv_plik_Path = this.BaseURL + "/cv_plik.php";
   readonly uzytkownicy = this.BaseURL + "/uzytkownicyPanel.php";
   readonly pytania = this.BaseURL + "/pytaniaPanel.php";
   readonly dodanie = this.BaseURL + "/dodaniePanel.php";
@@ -42,6 +43,7 @@ export class PytaniaTestService {
   getUsers(){
     return this.http.get(this.getCategoryPath);
   }
+  
 
   //changeCategory(category) {
   //  this.category.next(category)
@@ -50,10 +52,18 @@ export class PytaniaTestService {
   sendResult(data): Observable<any> {
     return this.http.post(this.resultPath, data);
   }
-  sendCvResult(data): Observable<any> {
-    return this.http.post(this.cvPath, data);
+  sendCvEmail(data): Observable<any> {
+    //data.append('file',plik);
+    return this.http.post(this.cv_email_Path, data);
   }
-
+  sendCvFile(file:File,data):Observable<HttpEvent<{}>>{
+    const formdata:FormData = new FormData();
+    formdata.append('file',file);
+    formdata.append('dane',JSON.stringify(data));
+    const req = new HttpRequest('POST',this.cv_plik_Path,formdata);
+    return this.http.request(req);
+  }
+  
 }
 
 /*Moduł serwisu - zawiera funkcję przeznaczoną do wykonywania zapytania z frontendu do api (po zdefiniowanym adresie url api)

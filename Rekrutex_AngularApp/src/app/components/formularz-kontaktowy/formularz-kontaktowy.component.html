@@ -37,7 +37,7 @@
         <div id="formularz_prawo">
           <div class="przycisk_tlo" id="formularz_upload_tlo">
             <div class="przycisk_cialo" id="formularz_upload_cialo">
-              <input class="przycisk_input" formControlName="cv_plik" type="file" id="formularz_upload">
+              <input accept=".pdf" class="przycisk_input" formControlName="cv_plik" (change)="selectFile($event)" type="file" id="formularz_upload">
               <label class="przycisk_label" for="formularz_upload">WYBIERZ PLIK</label>
             </div>
           </div>

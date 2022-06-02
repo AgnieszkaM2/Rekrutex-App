@@ -4,11 +4,14 @@ header("Access-Control-Allow-Methods: POST");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-header("Access-Control-Allow-Origin: *");
 
 require 'connect.php';
 
 //http_response_code(404);
+//$myfile=fopen("../debug.txt","w");
+    //fwrite($myfile,"ok");
+    //fclose($myfile);
+
 
 $resultdata=json_decode(file_get_contents("php://input"));
 if($resultdata!=null){
@@ -20,42 +23,20 @@ if($resultdata!=null){
     $plik=$resultdata->plik;
     $kategoria=$resultdata->kategoria;
     
-    //czy jest folder
+    //zrob folder
     
-    
-    
-    //zapisz plik na serwerze...
-
     $sciezka="../CV/".$id.'/'.$kategoria;
     $data=date("Ymd_His");
     
     mkdir("../CV/".$id);
     mkdir("../CV/".$id."/".$kategoria);
     
+    //zapisz plik na serwerze...
+
+    
+    
 
     //...i wyslij email do kadr, wskazujac link do pliku CV na naszym serwerze
-    
-    
-    
-    $myfile=fopen("../CV/testCV.txt","w");
-    fwrite($myfile,$id);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$f_name);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$l_name);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$tresc);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$plik);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$kategoria);
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,$sciezka."/email_".$data.".txt");
-    fwrite($myfile,PHP_EOL );
-    fwrite($myfile,"testcc");
-    fclose($myfile);
-    
-    
     
     $myfile=fopen($sciezka."/email_".$data.".txt","w");
     fwrite($myfile,"Od:\t");
@@ -76,6 +57,28 @@ if($resultdata!=null){
 
     
     
+        
+    
+    $myfile=fopen("../CV/testCV.txt","w");
+    fwrite($myfile,$id);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$f_name);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$l_name);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$tresc);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$plik);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$kategoria);
+    fwrite($myfile,PHP_EOL );
+    fwrite($myfile,$sciezka."/email_".$data.".txt");
+    fwrite($myfile,PHP_EOL );
+    if(isset($_FILES)){
+        fwrite($myfile,count($_FILES));
+    }
+    //
+    fclose($myfile);
     
     
     /*

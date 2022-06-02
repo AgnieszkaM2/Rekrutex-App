@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PytaniaTestService } from 'src/app/services/pytania-test.service';
+import {UploadFileService} from 'src/app/services/upload-file.service';
 
 @Component({
   selector: 'app-formularz-kontaktowy',
@@ -14,8 +15,11 @@ export class FormularzKontaktowyComponent implements OnInit {
 
   cvForm: FormGroup;
   chosenCategory: any;
+  choosenFile: File;
+  selectedFiles: FileList;
+  user: any;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private pytania: PytaniaTestService,private auth: AuthService, private router: Router) {
+  constructor(private fb: FormBuilder, private upload:UploadFileService, private http: HttpClient, private pytania: PytaniaTestService,private auth: AuthService, private router: Router) {
     this.cvForm = this.fb.group(
                                 {
       'cv_tresc': [''],
@@ -23,24 +27,22 @@ export class FormularzKontaktowyComponent implements OnInit {
       }
       );
     }
-      
-  user: any;
+  
+  selectFile(event){
+    this.selectedFiles=event.target.files;
+    
+  }
+  
   
   get cv_tresc() {
     return this.cvForm.get('cv_tresc')
-    
   }
-  
   get cv_plik() {
     return this.cvForm.get('cv_plik')
-    
   }
-  
-  
   setCurrentUser() {
     this.user = this.auth.getCurrentUser();
     if(this.user.Id!=null){
-
     }
   }
   
@@ -49,13 +51,12 @@ export class FormularzKontaktowyComponent implements OnInit {
     this.chosenCategory=sessionStorage.getItem('category');
   }
   submit(){
-    //console.log(this.cvForm.value.cv_tresc);
-    //console.log(this.cvForm.value.cv_plik);
-    this.sendResult();
+    
+    this.sendEmail();
+    this.sendFile();
   }
   
-  sendResult() {
-    //console.log(this.user.userId);
+  sendEmail() {
     let resultData = {
       
       id: this.user.Id,
@@ -66,7 +67,7 @@ export class FormularzKontaktowyComponent implements OnInit {
       kategoria: this.chosenCategory
     };
     
-    this.pytania.sendCvResult(resultData).subscribe(
+    this.pytania.sendCvEmail(resultData).subscribe(
       data => {
       console.log(data);     
     },
@@ -74,6 +75,26 @@ export class FormularzKontaktowyComponent implements OnInit {
     (error) => {
     })
 
+  }
+  sendFile(){
+    let resultData = {
+      
+      id: this.user.Id,
+      f_name: this.user.Name,
+      l_name: this.user.LastName,
+      tresc: this.cvForm.value.cv_tresc,
+      plik: this.cvForm.value.cv_plik,
+      kategoria: this.chosenCategory
+    };
+    
+    this.choosenFile = this.selectedFiles.item(0);
+    this.pytania.sendCvFile(this.choosenFile,resultData).subscribe(
+      choosenFile => {
+      console.log(choosenFile);     
+    },
+    
+    (error) => {
+    })
   }
   
 }
