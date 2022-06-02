@@ -48,9 +48,7 @@ line-height: 25px;
 #opcja_1:hover,#opcja_2:hover,#opcja_3:hover,#opcja_4:hover{
   background-color: rgba(var(--dark-bkg-rgb), 0.4);
 }
-#panel_tresc_tlo{
-  
-}
+
 #panel_tresc_cialo{
   overflow:auto;
 }
@@ -117,7 +115,4 @@ select,option{
 }
 #panel_dodaj_cialo {
   font-size:20pt;
-}
-#panel_dodaj_label{
-  
 }
