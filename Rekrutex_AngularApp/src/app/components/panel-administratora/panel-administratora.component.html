@@ -85,20 +85,30 @@
             </div>
             <div class="content-value" *ngIf="id === 'dwa'" align="center">
                 <label>Lista użytkowników:</label>
+                <ul>
+                    <li class="users-list" *ngFor='let user of users'> 
+                      {{ user.id }} - {{user.imie}} - {{user.nazwisko}} - {{user.email}} - {{user.wynik}}<br> 
+                    </li>
+                  </ul>
             </div>
             <div class="content-value" *ngIf="id === 'trzy'" align="center">
                 <label>Kategoria: </label>
                 <select>
-                    <option>Informatyk</option>
-                    <option>Elektronik</option>
+                    <option (click)="setCategory('Informatyk')">Informatyk</option>
+                    <option (click)="setCategory('Elektronik')">Elektronik</option>
                 </select>
                 <hr width="50%">
                 <div class="przycisk_tlo" id="panel_wyswietl_tlo">
                   <div class="przycisk_cialo" id="panel_wyswietl_cialo">
-                    <input class="przycisk_input" type="submit" id="panel_wyswietl_pytania">
+                    <input class="przycisk_input" (click)="bool='true'" id="panel_wyswietl_pytania">
                     <label class="przycisk_label" id="panel_wyswietl_label" for="panel_wyswietl_pytania">Wyświetl</label>
                   </div>
                 </div>
+                <ul *ngIf="bool === 'true'">
+                    <li class="questions-list" *ngFor='let question of Questions'> 
+                      {{ question.id }} - {{question.kategoria}}: <br> {{question.tresc}}: <br> a - {{question.odp1}} <br> b - {{question.odp2}} <br> c - {{question.odp3}} <br> d - {{question.odp4}} 
+                    </li>
+                </ul>
             </div>
         </div>
           

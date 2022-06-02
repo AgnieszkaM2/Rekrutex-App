@@ -19,6 +19,7 @@ export class AuthService {
   //url do konkretnego skryptu api
   readonly registerPath = this.BaseURL + "/register.php";
   readonly loginPath = this.BaseURL + "/login.php";
+  readonly usersPath = this.BaseURL + "/uzytkownicyPanel.php";
 
   register(data): Observable<any> {
     return this.http.post(this.registerPath, data);
@@ -80,6 +81,9 @@ export class AuthService {
 
   logout() {
     this.removeData();
+  }
+  getAllUsers(){
+    return this.http.get<Uzytkownik[]>(this.usersPath);
   }
 
 }
