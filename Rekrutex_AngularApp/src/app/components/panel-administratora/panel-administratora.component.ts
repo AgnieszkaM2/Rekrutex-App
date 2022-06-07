@@ -18,17 +18,30 @@ export class PanelAdministratoraComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.empty1();
-    this.empty2();
+    this.pobieranieUzytkownikow();
+    this.getCategory();
   }
 id:any= "jeden";
 users:any;
 Questions:any;
-chosenCategory:any="Informatyk";
+chosenCategory:any;
+categories: any;
 bool:any="false";
-setCategory(value){
-  this.chosenCategory = value;
+getCategory() {
+  this.pytania.getCategories().subscribe(response => {
+    this.categories = response;
+  }, error => {
+    console.log(error);
+  })
 }
+
+buttonClickPytania(){
+  var e = (document.getElementById("test")) as HTMLSelectElement;
+  this.chosenCategory = e.value;
+  this.bool="true";
+  this.pobieraniePytan();
+}
+
 tabChange(ids:any){
   
   
@@ -40,22 +53,20 @@ tabChange(ids:any){
   }
   this.id = ids;
 }
-empty1() {
+pobieranieUzytkownikow() {
   this.authService.getAllUsers().subscribe(response => {
     this.users = response;
   }, error => {
     console.log(error);
   })
 }
-empty2() {
+pobieraniePytan() {
   let categorydata = {
     kategoria: this.chosenCategory
   }
   this.pytania.getQuestions(categorydata).subscribe(response => {
     //console.log(response);
     this.Questions = response;
-
-
   }, error => {
     console.log(error);
   })

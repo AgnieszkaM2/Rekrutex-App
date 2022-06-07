@@ -107,14 +107,13 @@
             </div>
             <div class="content-value" *ngIf="id === 'trzy'" align="center">
                 <label>Kategoria: </label>
-                <select>
-                    <option (click)="setCategory('Informatyk')">Informatyk</option>
-                    <option (click)="setCategory('Elektronik')">Elektronik</option>
+                <select id="test">
+                    <option *ngFor='let category of categories' [value]="category.kategoria">{{category.kategoria}}</option>
                 </select>
                 <hr width="50%">
                 <div class="przycisk_tlo" id="panel_wyswietl_tlo">
                   <div class="przycisk_cialo" id="panel_wyswietl_cialo">
-                    <input class="przycisk_input" (click)="bool='true'" id="panel_wyswietl_pytania">
+                    <input class="przycisk_input" (click)="buttonClickPytania()" id="panel_wyswietl_pytania">
                     <label class="przycisk_label" id="panel_wyswietl_label" for="panel_wyswietl_pytania">Wyświetl</label>
                   </div>
                 </div>
