@@ -116,3 +116,22 @@ select,option{
 #panel_dodaj_cialo {
   font-size:20pt;
 }
+#tabela_uzytkownikow{
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  border-collapse: collapse;
+}
+#tabela_uzytkownikow thead{
+    background-color: rgba(var(--header-bkg-rgb), 0.4);
+    border-left: rgba(var(--header-bkg-rgb), 0.4);
+    border-right: rgba(var(--header-bkg-rgb), 0.4);
+    border-collapse: collapse;
+}
+
+#tabela_uzytkownikow tr:nth-of-type(4n){
+    background-color: rgba(var(--header-bkg-rgb), 0.2);
+    border-left: rgba(var(--header-bkg-rgb), 0.2);
+    border-right: rgba(var(--header-bkg-rgb), 0.2);
+    border-collapse: collapse;
+}

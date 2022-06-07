@@ -85,11 +85,25 @@
             </div>
             <div class="content-value" *ngIf="id === 'dwa'" align="center">
                 <label>Lista użytkowników:</label>
-                <ul>
-                    <li class="users-list" *ngFor='let user of users'> 
-                      {{ user.id }} - {{user.imie}} - {{user.nazwisko}} - {{user.email}} - {{user.wynik}}<br> 
-                    </li>
-                  </ul>
+                <hr>
+                <table id="tabela_uzytkownikow">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Imię</th>
+                      <th>Nazwisko</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor='let user of users'>
+                    <td>{{user.id}}</td>
+                    <td>{{user.imie}}</td>
+                    <td>{{user.nazwisko}}</td>
+                    <td>{{user.email}}</td>
+                  </tr>
+                </table>
+                <hr>
+                <br>
             </div>
             <div class="content-value" *ngIf="id === 'trzy'" align="center">
                 <label>Kategoria: </label>
