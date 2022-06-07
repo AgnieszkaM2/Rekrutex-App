@@ -118,11 +118,44 @@
                     <label class="przycisk_label" id="panel_wyswietl_label" for="panel_wyswietl_pytania">Wyświetl</label>
                   </div>
                 </div>
-                <ul *ngIf="bool === 'true'">
-                    <li class="questions-list" *ngFor='let question of Questions'> 
-                      {{ question.id }} - {{question.kategoria}}: <br> {{question.tresc}}: <br> a - {{question.odp1}} <br> b - {{question.odp2}} <br> c - {{question.odp3}} <br> d - {{question.odp4}} 
-                    </li>
-                </ul>
+                
+                <hr>
+                <div *ngIf="bool === 'true'">
+                  <table id="tabela_pytania"  *ngFor='let question of Questions'>
+                  <tr class="tabela_pytania_head">
+                    <td>ID: {{question.id}}</td>
+                    <td></td>
+                    <td>{{question.kategoria}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_tresc">
+                    <td colspan="3">{{question.tresc}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_pytanie">
+                    <td>#1: </td>
+                    <td colspan="2">{{question.odp1}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_pytanie">
+                    <td>#2: </td>
+                    <td colspan="2">{{question.odp2}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_pytanie">
+                    <td>#3: </td>
+                    <td colspan="2">{{question.odp3}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_pytanie">
+                    <td>#4: </td>
+                    <td colspan="2">{{question.odp4}}</td>
+                  </tr>
+                  <tr class="tabela_pytania_foot">
+                    <td colspan="2">Poprawna: {{question.prawidlowa}}</td>
+                    <td></td>
+                    
+                  </tr>
+                  <br>
+                </table>
+                <hr>
+                <br>
+                </div>
             </div>
         </div>
           

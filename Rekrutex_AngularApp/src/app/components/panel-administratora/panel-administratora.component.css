@@ -121,6 +121,8 @@ select,option{
   overflow-x: scroll;
   overflow-y: scroll;
   border-collapse: collapse;
+  width:98%;
+  position: relative;
 }
 #tabela_uzytkownikow thead{
     background-color: rgba(var(--header-bkg-rgb), 0.4);
@@ -133,5 +135,27 @@ select,option{
     background-color: rgba(var(--header-bkg-rgb), 0.2);
     border-left: rgba(var(--header-bkg-rgb), 0.2);
     border-right: rgba(var(--header-bkg-rgb), 0.2);
+    border-collapse: collapse;
+}
+#tabela_pytania{
+  width: 98%;
+  position:relative;
+  text-align: left;
+  border: solid black 0px;
+  border-collapse: collapse;
+}
+#tabela_pytania td{
+  border: solid black 0px;
+}
+#tabela_pytania tr td:first-child{
+  width:12%;
+}
+#tabela_pytania tr td:nth-child(2){
+  font-weight: normal;
+}
+.tabela_pytania_head{
+  background-color: rgba(var(--header-bkg-rgb), 0.4);
+    border-left: rgba(var(--header-bkg-rgb), 0.4);
+    border-right: rgba(var(--header-bkg-rgb), 0.4);
     border-collapse: collapse;
 }
