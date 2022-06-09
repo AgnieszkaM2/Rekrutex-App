@@ -19,13 +19,11 @@ export class PanelAdministratoraComponent implements OnInit {
   constructor(private fb: FormBuilder, private pytania: PytaniaTestService, private authService: AuthService, private router: Router){
     this.dodatniePytaniaForm = this.fb.group(
       {
-        'dodatniePytania_kategoria': [''],
         'dodatniePytania_tresc': [''],
         'dodatniePytania_odp1': [''],
         'dodatniePytania_odp2': [''],
         'dodatniePytania_odp3': [''],
         'dodatniePytania_odp4': [''],
-        'dodaniePytania_poprawna': ['']
       }
       );
   }
@@ -34,9 +32,6 @@ export class PanelAdministratoraComponent implements OnInit {
     this.getCategory();
   }
 
-  get dodatniePytania_kategoria() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_kategoria')
-  }
   get dodatniePytania_tresc() {
     return this.dodatniePytaniaForm.get('dodatniePytania_tresc')
   }
@@ -52,9 +47,6 @@ export class PanelAdministratoraComponent implements OnInit {
   get dodatniePytania_odp4() {
     return this.dodatniePytaniaForm.get('dodatniePytania_odp4')
   }
-  get dodaniePytania_poprawna() {
-    return this.dodatniePytaniaForm.get('dodaniePytania_poprawna')
-  }
 
   dodaniePytaniaError: boolean=false;
   errorMessage="";
@@ -62,27 +54,27 @@ export class PanelAdministratoraComponent implements OnInit {
 
 
   submit(){
+    var kategoriaDoPytania = (document.getElementById("test2")) as HTMLSelectElement;
+    var poprawnaOdpowiedz = (document.getElementById("test2")) as HTMLSelectElement;
     let pytaniedata = {
-      kategoria: this.dodatniePytaniaForm.value.kategoria,
+      kategoria: kategoriaDoPytania.value,
       tresc: this.dodatniePytaniaForm.value.tresc,
       odp1: this.dodatniePytaniaForm.value.odp1,
       odp2: this.dodatniePytaniaForm.value.odp2,
       odp3: this.dodatniePytaniaForm.value.odp3,
       odp4: this.dodatniePytaniaForm.value.odp4,
-      poprawna: this.dodatniePytaniaForm.value.poprawna,
-      prawidlowa: this.dodatniePytaniaForm.value.poprawna,
+      poprawna: poprawnaOdpowiedz.value,
+      prawidlowa: poprawnaOdpowiedz.value,
     };
     this.authService.dodaniePytania(pytaniedata).subscribe(
       data => {
       console.log(data); 
       console.log('wysłane')
-      this.dodatniePytaniaForm.controls['dodatniePytania_kategoria'].reset();
       this.dodatniePytaniaForm.controls['dodatniePytania_tresc'].reset();
       this.dodatniePytaniaForm.controls['dodatniePytania_odp1'].reset();
       this.dodatniePytaniaForm.controls['dodatniePytania_odp2'].reset();
       this.dodatniePytaniaForm.controls['dodatniePytania_odp3'].reset();
       this.dodatniePytaniaForm.controls['dodatniePytania_odp4'].reset();
-      this.dodatniePytaniaForm.controls['dodatniePytania_poprawna'].reset();
     },
     (error) => {
       if (error.status === 404) {
@@ -112,8 +104,8 @@ getCategory() {
 }
 
 buttonClickPytania(){
-  var e = (document.getElementById("test")) as HTMLSelectElement;
-  this.chosenCategory = e.value;
+  var kategoriaDlaPytan = (document.getElementById("test")) as HTMLSelectElement;
+  this.chosenCategory = kategoriaDlaPytan.value;
   this.bool="true";
   this.pobieraniePytan();
 }
