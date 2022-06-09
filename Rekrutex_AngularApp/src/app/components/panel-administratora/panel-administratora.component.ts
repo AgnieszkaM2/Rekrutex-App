@@ -14,12 +14,87 @@ import { PytaniaTestService } from 'src/app/services/pytania-test.service';
 
 export class PanelAdministratoraComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private pytania: PytaniaTestService, private authService: AuthService, private router: Router){
+  dodatniePytaniaForm: FormGroup;
 
+  constructor(private fb: FormBuilder, private pytania: PytaniaTestService, private authService: AuthService, private router: Router){
+    this.dodatniePytaniaForm = this.fb.group(
+      {
+        'dodatniePytania_kategoria': [''],
+        'dodatniePytania_tresc': [''],
+        'dodatniePytania_odp1': [''],
+        'dodatniePytania_odp2': [''],
+        'dodatniePytania_odp3': [''],
+        'dodatniePytania_odp4': [''],
+        'dodaniePytania_poprawna': ['']
+      }
+      );
   }
   ngOnInit(): void {
     this.pobieranieUzytkownikow();
     this.getCategory();
+  }
+
+  get dodatniePytania_kategoria() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_kategoria')
+  }
+  get dodatniePytania_tresc() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_tresc')
+  }
+  get dodatniePytania_odp1() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_odp1')
+  }
+  get dodatniePytania_odp2() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_odp2')
+  }
+  get dodatniePytania_odp3() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_odp3')
+  }
+  get dodatniePytania_odp4() {
+    return this.dodatniePytaniaForm.get('dodatniePytania_odp4')
+  }
+  get dodaniePytania_poprawna() {
+    return this.dodatniePytaniaForm.get('dodaniePytania_poprawna')
+  }
+
+  dodaniePytaniaError: boolean=false;
+  errorMessage="";
+
+
+
+  submit(){
+    let pytaniedata = {
+      kategoria: this.dodatniePytaniaForm.value.kategoria,
+      tresc: this.dodatniePytaniaForm.value.tresc,
+      odp1: this.dodatniePytaniaForm.value.odp1,
+      odp2: this.dodatniePytaniaForm.value.odp2,
+      odp3: this.dodatniePytaniaForm.value.odp3,
+      odp4: this.dodatniePytaniaForm.value.odp4,
+      poprawna: this.dodatniePytaniaForm.value.poprawna,
+      prawidlowa: this.dodatniePytaniaForm.value.poprawna,
+    };
+    this.authService.dodaniePytania(pytaniedata).subscribe(
+      data => {
+      console.log(data); 
+      console.log('wysłane')
+      this.dodatniePytaniaForm.controls['dodatniePytania_kategoria'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_tresc'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_odp1'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_odp2'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_odp3'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_odp4'].reset();
+      this.dodatniePytaniaForm.controls['dodatniePytania_poprawna'].reset();
+    },
+    (error) => {
+      if (error.status === 404) {
+        this.errorMessage="Błąd serwera";
+      }else if (error.status === 400) {
+        this.errorMessage="Użytkownik już istnieje, wprowadź inne dane.";
+      }else {
+        this.errorMessage="";
+      }
+      this.dodaniePytaniaError=true;
+    })
+
   }
 id:any= "jeden";
 users:any;
@@ -27,6 +102,7 @@ Questions:any;
 chosenCategory:any;
 categories: any;
 bool:any="false";
+
 getCategory() {
   this.pytania.getCategories().subscribe(response => {
     this.categories = response;

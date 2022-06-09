@@ -20,6 +20,11 @@ export class AuthService {
   readonly registerPath = this.BaseURL + "/register.php";
   readonly loginPath = this.BaseURL + "/login.php";
   readonly usersPath = this.BaseURL + "/uzytkownicyPanel.php";
+  readonly dodaniePytaniaPath = this.BaseURL + "/dodaniePytaniaPanel.php";
+
+  dodaniePytania(data): Observable<any> {
+    return this.http.post(this.dodaniePytaniaPath, data);
+  }
 
   register(data): Observable<any> {
     return this.http.post(this.registerPath, data);

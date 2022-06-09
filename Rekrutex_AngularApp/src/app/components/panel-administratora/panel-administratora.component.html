@@ -31,13 +31,14 @@
           <br>
           <div class ="zakladka-admina">
             <div class="content-value" *ngIf="id === 'jeden'" align="center">
+              <form [formGroup]="dodatniePytaniaForm" (ngSubmit)="submit()">
                 <table id="dodanie_pytana">
                   <tr>
                     <td><label>Kategoria: </label></td>
                     <td>
-                      <select>
-                        <option>Informatyk</option>
-                        <option>Elektronik</option>
+                      <select id="test2" formControlName="dodaniePytania_kategoria">
+                        <option value=Informatyk selected>Informatyk</option>
+                        <option value=Elektronik>Elektronik</option>
                       </select>
                     </td>
                   </tr>
@@ -45,37 +46,39 @@
                 <hr width="100%">
                   <tr>
                     <td><label>Treść pytania: </label></td>
-                    <td><input id="tresc_pytania" type="text" class="form-control" placeholder=""><br></td>
+                    <td><input id="tresc_pytania" type="text" class="form-control" placeholder="" formControlName="dodatniePytania_tresc"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 1: </label></td>
-                    <td><input id="odp1" type="text" class="form-control" placeholder=""><br></td>
+                    <td><input id="odp1" type="text" class="form-control" placeholder="" formControlName="dodatniePytania_odp1"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 2: </label></td>
-                    <td><input id="odp2" type="text" class="form-control" placeholder=""><br></td>
+                    <td><input id="odp2" type="text" class="form-control" placeholder="" formControlName="dodatniePytania_odp2"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 3: </label></td>
-                    <td><input id="odp3" type="text" class="form-control" placeholder=""><br></td>
+                    <td><input id="odp3" type="text" class="form-control" placeholder="" formControlName="dodatniePytania_odp3"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 4: </label></td>
-                    <td><input id="odp4" type="text" class="form-control" placeholder=""><br></td>
+                    <td><input id="odp4" type="text" class="form-control" placeholder="" formControlName="dodatniePytania_odp4"><br></td>
                   </tr>
                   <hr>
                   <tr>
                     <td><label>Poprawna: </label></td>
-                    <td><select>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                    <td><select id="test3" formControlName="dodaniePytania_poprawna">
+                      <option [value]="1" selected>1</option>
+                      <option [value]="2">2</option>
+                      <option [value]="3">3</option>
+                      <option [value]="4">4</option>
                   </select></td>
                   </tr>
                   
                   <br>
                 </table>
+              </form>
+                
                 <div class="przycisk_tlo" id="panel_dodaj_tlo">
                   <div class="przycisk_cialo" id="panel_dodaj_cialo">
                     <input class="przycisk_input" type="submit" id="panel_dodaj_pytanie">
