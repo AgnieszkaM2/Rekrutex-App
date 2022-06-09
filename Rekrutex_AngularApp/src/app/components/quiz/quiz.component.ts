@@ -129,7 +129,8 @@ export class QuizComponent implements OnInit {
     let resultData = {
       
       id: this.user.Id,
-      wynik: this.procent
+      wynik: this.procent,
+      kategoria: this.chosenCategory
     };
     this.pytania.sendResult(resultData).subscribe(
       data => {

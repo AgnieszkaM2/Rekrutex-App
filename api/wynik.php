@@ -13,9 +13,12 @@ if($resultdata!=null){
     
     $id=$resultdata->id;
     $wynik=$resultdata->wynik;
+    $kategoria=$resultdata->kategoria;
     
 
-    $sql = "UPDATE uzytkownicy set wynik = '$wynik' where id_uzytkownicy = '$id'";
+    //$sql1 = "UPDATE uzytkownicy set wynik = '$wynik' where id_uzytkownicy = '$id'";
+    $sql = "INSERT INTO wyniki(uzytkownik_id, kategoria, wynik) VALUES('$id', '$kategoria', '$wynik')";
+
     if($result = mysqli_query($con,$sql))
     {
        echo json_encode($result);
