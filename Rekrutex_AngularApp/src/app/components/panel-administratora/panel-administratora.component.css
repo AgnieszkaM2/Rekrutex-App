@@ -124,6 +124,10 @@ select,option{
   width:98%;
   position: relative;
 }
+#tabela_uzytkownikow td{
+  padding-left: 5px;
+  padding-right: 5px;
+}
 #tabela_uzytkownikow thead{
     background-color: rgba(var(--header-bkg-rgb), 0.4);
     border-left: rgba(var(--header-bkg-rgb), 0.4);
@@ -136,6 +140,7 @@ select,option{
     border-left: rgba(var(--header-bkg-rgb), 0.2);
     border-right: rgba(var(--header-bkg-rgb), 0.2);
     border-collapse: collapse;
+    
 }
 #tabela_pytania{
   width: 98%;
@@ -158,4 +163,7 @@ select,option{
     border-left: rgba(var(--header-bkg-rgb), 0.4);
     border-right: rgba(var(--header-bkg-rgb), 0.4);
     border-collapse: collapse;
+}
+#tabela_email{
+  text-align: left;
 }
