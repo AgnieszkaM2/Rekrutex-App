@@ -173,10 +173,7 @@ input {
   
 }
 @media all and (orientation:portrait){
-#toggler{
-  margin:0px;
-  padding: 0px;
-}
+
 
 aside {
     width: 110%;
