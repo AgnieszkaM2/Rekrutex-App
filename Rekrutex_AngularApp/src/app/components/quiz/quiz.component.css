@@ -1,8 +1,38 @@
-#quiz_tlo {
-  left: 0%;
-  padding: 0.5%;
-  width: 90%;
+
+
+@media all and (orientation:landscape){
+  #quiz_tlo {
+    left: 5%;
+    padding: 0.5%;
+    width: 90%;
+  }
+  
+  #quiz_prawo {
+    box-sizing: border-box;
+    float: left;
+    width: 35%;
+    left: 10%;
+    position: relative;
+  }
+
 }
+@media all and (orientation:portrait){
+  #quiz_tlo {
+    left: 0%;
+    padding: 0.5%;
+    width: 100%;
+  }
+  
+  #quiz_prawo {
+    box-sizing: border-box;
+    float: left;
+    width: 45%;
+    left: 5%;
+    position: relative;
+  }
+
+}
+
 #quiz_cialo {
   padding: 3%;
   width:100%;
@@ -57,13 +87,7 @@
   left:0%;
   position:relative;
 }
-#quiz_prawo {
-  box-sizing: border-box;
-  float: left;
-  width: 35%;
-  left: 10%;
-  position: relative;
-}
+
 #quiz_submit_tlo {
   top:25%;
 }

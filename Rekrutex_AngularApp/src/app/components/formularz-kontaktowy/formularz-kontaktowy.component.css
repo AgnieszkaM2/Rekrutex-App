@@ -6,11 +6,7 @@
 #formularz_cialo {
   padding: 3%;
 }
-#formularz_naglowek_tlo {
-  padding: 0.5%;
-  width: 60%;
-  left: 20%;
-}
+
 #formularz_naglowek_cialo {
   padding:1px;
 }
@@ -52,11 +48,7 @@
     border: 5px double var(--dark-bkg);
     border-radius: 10px; 
 }
-#formularz_upload_tlo {
-  padding: 0.5%;
-  width: 70%;
-  left: 15%;
-}
+
 #formularz_upload_cialo {
   font-weight: bold;
   padding:5px;
@@ -76,11 +68,7 @@
   width:50%;
   left:25%;
 }
-#formularz_submit_tlo {
-  padding: 0.5%;
-  width: 30%;
-  left: 35%;
-}
+
 #formularz_submit_cialo {
   padding-top: 0.5%;
   padding-bottom: 0.5%;
@@ -123,3 +111,43 @@
     padding-top: 5px;
     padding-bottom:5px;
 }
+
+@media all and (orientation:landscape){
+  #formularz_naglowek_tlo {
+    padding: 0.5%;
+    width: 60%;
+    left: 20%;
+  }
+  
+  #formularz_submit_tlo {
+  padding: 0.5%;
+  width: 30%;
+  left: 35%;
+  }
+  
+  #formularz_upload_tlo {
+    padding: 0.5%;
+    width: 70%;
+    left: 15%;
+  }
+}
+@media all and (orientation:portrait){
+  #formularz_naglowek_tlo {
+    padding: 0.5%;
+    width: 90%;
+    left: 5%;
+  }
+  
+  #formularz_submit_tlo {
+  padding: 0.5%;
+  width: 50%;
+  left: 25%;
+  }
+  
+  #formularz_upload_tlo {
+  padding: 0.5%;
+  width: 90%;
+  left: 5%;
+  }
+}
+
