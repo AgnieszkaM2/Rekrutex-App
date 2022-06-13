@@ -19,20 +19,42 @@ body{
 #panel_opcje_tlo{
   overflow: auto;
 }
-
-#opcja_1,#opcja_2,#opcja_3{
-  width:32%;
-  padding:0px;
-  margin:0px;
-  float:left;
-  position:relative;
-  height:60px;
-  
-  vertical-align: middle;
-    cursor: pointer;
-  border: 5px double var(--dark-bkg);
-  border-radius: 10px; 
+@media all and (orientation:landscape){
+  #opcja_1,#opcja_2,#opcja_3{
+    width:32%;
+    padding:0px;
+    margin:0px;
+    float:left;
+    position:relative;
+    height:60px;
+    
+    vertical-align: middle;
+      cursor: pointer;
+    border: 5px double var(--dark-bkg);
+    border-radius: 10px; 
+  }
 }
+@media all and (orientation:portrait){
+  #panel_opcje_tlo{
+    overflow: hidden;
+    padding:1%;
+  }
+  #opcja_1,#opcja_2,#opcja_3{
+    width:32%;
+
+    float:left;
+    position:relative;
+    
+    vertical-align: middle;
+      cursor: pointer;
+    border: 5px double var(--dark-bkg);
+    border-radius: 10px;
+    
+    padding-bottom: 1em;
+    margin-bottom:-1em;
+  }
+}
+
 #opcja_1{
   line-height: 50px;
   left:0.5%;
@@ -111,7 +133,7 @@ select,option{
   width:25%;
 }
 #panel_wyswietl_tlo{
-  width:30%;
+  width:50%;
 }
 #panel_dodaj_cialo {
   font-size:20pt;
