@@ -14,6 +14,7 @@ import { FormularzKontaktowyComponent } from './components/formularz-kontaktowy/
 import { PanelAdministratoraComponent } from './components/panel-administratora/panel-administratora.component';
 import { TestComponent } from './components/test/test.component';
 import { AuthService } from './services/auth.service';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AuthService } from './services/auth.service';
     QuizComponent,
     FormularzKontaktowyComponent,
     PanelAdministratoraComponent,
-    TestComponent
+    TestComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,

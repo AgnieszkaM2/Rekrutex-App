@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+  }
+#panel_okno_tlo {
+    left: 0%;
+    width: 100%;
+  }
+#panel_okno_cialo {
+    width:98%;
+  
+  }
+#panel_naglowek_tlo {
+    width: 80%;
+    left: 10%;
+  }
+#panel_naglowek_cialo {
+    padding:1px;
+  }
+#panel_opcje_tlo{
+    overflow: auto;
+  }
+
+select,option{
+    padding:5px;
+    background: red;
+    font-size: 15px;
+    border: 7px double var(--input-border);
+    border-radius: 15px;
+    background-color: rgba(var(--header-bkg-rgb), 0.6);
+    color: var(--white-text);
+  }
+
+#tabela_uzytkownikow{
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border-collapse: collapse;
+    width:98%;
+    position: relative;
+  }
+#tabela_uzytkownikow thead{
+      background-color: rgba(var(--header-bkg-rgb), 0.4);
+      border-left: rgba(var(--header-bkg-rgb), 0.4);
+      border-right: rgba(var(--header-bkg-rgb), 0.4);
+      border-collapse: collapse;
+  }
+  
+#tabela_uzytkownikow tr:nth-of-type(7n){
+      background-color: rgba(var(--header-bkg-rgb), 0.2);
+      border-left: rgba(var(--header-bkg-rgb), 0.2);
+      border-right: rgba(var(--header-bkg-rgb), 0.2);
+      border-collapse: collapse;
+  }
+
+input[type=textarea],input[type=text], input[type=password]{
+    border: 7px double var(--input-border);
+    border-radius: 15px;
+    width:300px;
+    height:30px;
+    background-color: rgba(var(--header-bkg-rgb), 0.6);
+    color: var(--white-text);
+    font-size: 15px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+.przycisk_tlo {
+    width: 30%;
+    left:35%;
+
+}
+th{
+    border: 1px solid rgba(var(--main-div-bkg-rgb), 0.7);
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:1px;
+    padding-right:1px;
+  }
+td{
+    border: 1px solid rgba(var(--main-div-bkg-rgb), 0.7);
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+tr:hover{
+    background-color: rgba(var(--main-div-bkg-rgb), 0.7);
+  }
+.tabela_pytania_head{
+    background-color: rgba(var(--header-bkg-rgb), 0.4);
+      border-left: rgba(var(--header-bkg-rgb), 0.4);
+      border-right: rgba(var(--header-bkg-rgb), 0.4);
+      border-collapse: collapse;
+  }

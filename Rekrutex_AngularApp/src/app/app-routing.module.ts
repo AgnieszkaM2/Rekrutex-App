@@ -8,6 +8,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { FormularzKontaktowyComponent } from './components/formularz-kontaktowy/formularz-kontaktowy.component';
 import { PanelAdministratoraComponent } from './components/panel-administratora/panel-administratora.component';
 import { TestComponent } from './components/test/test.component';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'strona-glowna', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'formularz-kontaktowy', component: FormularzKontaktowyComponent },
   { path: 'panel-administratora', component: PanelAdministratoraComponent },
   { path: 'test', component: TestComponent },
+  { path: 'ranking', component: RankingComponent },
 ];
 
 @NgModule({

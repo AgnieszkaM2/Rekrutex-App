@@ -53,6 +53,26 @@
         </div>
       </div>
     </li>
+    <li *ngIf="isAdmin==true">
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_LOG">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_LOG">
+          <a routerLink="/panel-administratora" routerLinkActive="active">
+            <input class="przycisk_input" type="submit" id="menu_logowanie">
+            <label class="przycisk_label menu_label" id="menu_przycisk_label_LOG" for="menu_panel">PANEL ADMINISTRATORA</label>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li *ngIf="isAdmin==true">
+      <div class="przycisk_tlo" id="menu_przycisk_tlo_LOG">
+        <div class="przycisk_cialo" id="menu_przycisk_cialo_LOG">
+          <a routerLink="/ranking" routerLinkActive="active">
+            <input class="przycisk_input" type="submit" id="menu_logowanie">
+            <label class="przycisk_label menu_label" id="menu_przycisk_label_LOG" for="menu_ranking">RANKING</label>
+          </a>
+        </div>
+      </div>
+    </li>
     <li id="logout" *ngIf="isUser" (click)="logout()">
       <div class="przycisk_tlo" id="menu_przycisk_tlo_WYLOG">
         <div class="przycisk_cialo" id="menu_przycisk_cialo_WYLOG">

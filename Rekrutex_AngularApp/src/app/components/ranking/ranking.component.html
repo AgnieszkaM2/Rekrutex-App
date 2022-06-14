@@ -1,0 +1,58 @@
+<br>
+<div class="main-div" align="center">
+  <div class="okno_tlo" id="panel_okno_tlo">
+    <div class="okno_cialo" id="panel_okno_cialo">
+      <div class="naglowek_tlo" id="panel_naglowek_tlo">
+        <div class="naglowek_cialo" id="panel_naglowek_cialo">
+          <h1>Ranking</h1>
+        </div>
+      </div>
+      <hr>
+      <div class="tresc_tlo" id="panel_tresc_tlo">
+        <div class="tresc_cialo" id="panel_tresc_cialo">
+            <label>Kategoria: </label>
+                <select id="test">
+                    <option *ngFor='let category of categories' [value]="category.kategoria">{{category.kategoria}}</option>
+                </select>
+                <hr width="50%">
+                <div class="przycisk_tlo" id="panel_wyswietl_tlo">
+                    <div class="przycisk_cialo" id="panel_wyswietl_cialo">
+                      <input class="przycisk_input" (click)="wyswietl()" id="panel_wyswietl">
+                      <label class="przycisk_label" id="panel_wyswietl_label" for="panel_wyswietl">Wyświetl</label>
+                    </div>
+                  </div>
+            <div class="content-value" *ngIf="wyswietlanie === true" align="center">
+                <br>
+                <label>Ranking użytkowników:</label>
+                <hr>
+                <table id="tabela_uzytkownikow">
+                  <thead>
+                    <tr>
+                      <th>Nr.</th>
+                      <th>Imię</th>
+                      <th>Nazwisko</th>
+                      <th>Email</th>
+                      <th>Telefon</th>
+                      <th>Wynik</th>
+                      <th>Czas</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor='let user of sorted; let i = index'>
+                    <td>{{(i+1)}}</td>
+                    <td>{{user.imie}}</td>
+                    <td>{{user.nazwisko}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.nr_telefonu}}</td>
+                    <td>{{user.wynik}}</td>
+                    <td>{{user.czas}}</td>
+                  </tr>
+                </table>
+                <hr>
+                <br>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

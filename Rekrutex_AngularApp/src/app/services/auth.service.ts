@@ -21,6 +21,7 @@ export class AuthService {
   readonly loginPath = this.BaseURL + "/login.php";
   readonly usersPath = this.BaseURL + "/uzytkownicyPanel.php";
   readonly dodaniePytaniaPath = this.BaseURL + "/dodaniePytaniaPanel.php";
+  readonly rankingPath = this.BaseURL + "/ranking.php";
 
   dodaniePytania(data): Observable<any> {
     return this.http.post(this.dodaniePytaniaPath, data);
@@ -89,6 +90,10 @@ export class AuthService {
   }
   getAllUsers(){
     return this.http.get<Uzytkownik[]>(this.usersPath);
+  }
+
+  getUsersByCategory(data): Observable <any> {
+    return this.http.post(this.rankingPath, data);
   }
 
 }

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   title = 'Rekrutex_AngularApp';
   user : any;
   isUser: boolean = false;
+  isAdmin: boolean=false;
 
   constructor(private http: HttpClient, private auth: AuthService, private router: Router) {}
 
@@ -24,6 +25,9 @@ export class AppComponent implements OnInit{
     this.user = this.auth.getCurrentUser();
     if(this.user.Id!=null){
       this.isUser=true;
+      if(this.user.UserType=='admin') {
+        this.isAdmin=true;
+      }
     }
   }
 
