@@ -16,7 +16,7 @@
 }
 
 .logo {
-  width: 120%;
+  min-width: 120%;
   left:-5%;
   line-height: 50px;
   font-size: 32px;
@@ -28,8 +28,10 @@
   
   border: 5px double var(--dark-bkg);
   
+  text-align: center;
   border-radius: 10px;
   vertical-align: middle;
+  box-sizing: border-box;
   
   content: "";
   clear: both;
@@ -42,11 +44,11 @@
 #menu_witaj_tlo{
   left:-5%;
   
-  width:115%;
+  width:125%;
 }
 #menu_przycisk_tlo_SG,#menu_przycisk_tlo_KAT,#menu_przycisk_tlo_LOG,#menu_przycisk_tlo_WYLOG {
   left:-5%;
-  width:115%;
+  width:125%;
   text-align: center;
   z-index: auto;
   position:relative;
@@ -129,9 +131,19 @@ input {
   color: var(--white-text) !important;
 } 
 
+#toggler:checked ~ aside .logo{
+font-size: 1px;
+
+width: 290px;
+}
+#toggler:checked ~ aside #logo_obrazek{
+  float:right;
+  left:0%;
+}
+
 /* Toggler Functionality */
 #toggler:checked ~ aside {
-  left: -15%;
+  left: -220px;
 }
 /*
 #toggler:hover ~ aside {
@@ -160,15 +172,20 @@ input {
   
 }
 #logo_obrazek{
-  width:50px;
-  height:50px;
-  right:0%;
+  width:10%;
+  height:10%;
+  min-height: 50px;
+  min-width: 50px;
+  left:45%;
   padding:0px;
   margin: 0px;
   box-sizing: border-box;
   position: relative;
   vertical-align: middle;
-  float:right;
+  float:none;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
 }
   
 }
@@ -214,6 +231,8 @@ aside {
   clear: both;
   display: table;
 }
+
+
 #menu_header{
   
   
