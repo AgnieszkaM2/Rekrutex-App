@@ -62,28 +62,53 @@
     transform: scale(1.08, 1.08);
     background-color: rgba(var(--dark-bkg-rgb), 0.4);
 }
-input[type=submit], button {
-    color: var(--white-text);
-    height: 70px;
-    width: 200px;
-    font-size: 25px;
-    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
-    border-radius: 15px; 
-    background-color: var(--dark-bkg);
-}
+
 
 button:hover{
     transform: scale(1.08, 1.08);
     background-color: rgba(var(--dark-bkg-rgb), 0.8);
 }
-
-input[type=text], input[type=email], input[type=password] {
+@media all and (orientation:landscape){
+  input[type=text], input[type=email], input[type=password] {
     border: 7px double var(--input-border);
     border-radius: 15px;
     width:300px;
+    width:60%;
     height:30px;
     background-color: rgba(var(--header-bkg-rgb), 0.6);
     color: var(--white-text);
     font-size: 15px;
 
+}
+input[type=submit], button {
+    color: var(--white-text);
+    height: 70px;
+    width: 65%;
+    font-size: 25px;
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+    border-radius: 15px; 
+    background-color: var(--dark-bkg);
+}
+}
+@media all and (orientation:portrait){
+  input[type=text], input[type=email], input[type=password] {
+    border: 7px double var(--input-border);
+    border-radius: 15px;
+    width:300px;
+    width:90%;
+    height:30px;
+    background-color: rgba(var(--header-bkg-rgb), 0.6);
+    color: var(--white-text);
+    font-size: 15px;
+
+}
+input[type=submit], button {
+    color: var(--white-text);
+    height: 70px;
+    width: 65%;
+    font-size: 25px;
+    border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
+    border-radius: 15px; 
+    background-color: var(--dark-bkg);
+}
 }
