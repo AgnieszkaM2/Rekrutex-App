@@ -25,14 +25,15 @@
 }
 #kategorie_tresc_cialo .przycisk_label{
     color: var(--white-text);
-    padding:4%;
-    width: 200px;
+    padding:5%;
+    width:90%;
     font-size: 25px;
     border: 7px double rgba(var(--main-div-bkg-rgb), 0.7);
     border-radius: 15px; 
     background-color: var(--dark-bkg);
     margin: 2%;
     vertical-align: middle;
+    box-sizing: border-box;
 }
 #kategorie_tresc_cialo .przycisk_label:hover{
       transform: scale(1.08, 1.08);
@@ -49,6 +50,7 @@
     border-radius: 15px;
     margin:2%;
     list-style-type: none;
+    box-sizing: border-box;
 }
 .category-header{
     height: 90%;
@@ -81,7 +83,7 @@
     padding: 0;
     margin:0;
     list-style-type: none;
-
+  
 }
 
 .category-body button {
