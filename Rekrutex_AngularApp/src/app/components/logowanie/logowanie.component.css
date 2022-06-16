@@ -31,7 +31,7 @@
 .loginResult {
     position: absolute;
     top:250px;
-    height: 40%;
+    
     width: 60%;
     background-color: var(--popup-bkg);
     color: var(--white-text);
