@@ -14,7 +14,7 @@ if($pytaniedata!=null){
     $odp2=$pytaniedata->odp2;
     $odp3=$pytaniedata->odp3;
     $odp4=$pytaniedata->odp4;
-    $poprawna=$pytaniedata->odp4;
+    $poprawna=$pytaniedata->poprawna;
     $prawidlowa=$pytaniedata->prawidlowa;
 
     $sql2 = "SELECT kategoria, tresc FROM pytania where (kategoria='$kategoria' and tresc ='$tresc')";
