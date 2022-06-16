@@ -150,7 +150,7 @@ select,option{
   font-size:20pt;
 }
 #tabela_uzytkownikow{
-  text-align: center;
+  text-align: left;
   overflow-x: scroll;
   overflow-y: scroll;
   border-collapse: collapse;
