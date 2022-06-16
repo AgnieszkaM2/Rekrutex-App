@@ -54,8 +54,8 @@ export class PanelAdministratoraComponent implements OnInit {
 
 
   submit(){
-    var kategoriaDoPytania = (document.getElementById("test2")) as HTMLSelectElement;
-    var poprawnaOdpowiedz = (document.getElementById("test2")) as HTMLSelectElement;
+    var kategoriaDoPytania = (document.getElementById("kategoriaPytania")) as HTMLSelectElement;
+    var prawidlowaOdpowiedz = (document.getElementById("prawidlowaOdpowiedz")) as HTMLSelectElement;
     let pytaniedata = {
       kategoria: kategoriaDoPytania.value,
       tresc: this.dodatniePytaniaForm.value.tresc,
@@ -63,9 +63,10 @@ export class PanelAdministratoraComponent implements OnInit {
       odp2: this.dodatniePytaniaForm.value.odp2,
       odp3: this.dodatniePytaniaForm.value.odp3,
       odp4: this.dodatniePytaniaForm.value.odp4,
-      poprawna: poprawnaOdpowiedz.value,
-      prawidlowa: poprawnaOdpowiedz.value,
+      poprawna: this.dodatniePytaniaForm.value.odp4,
+      prawidlowa: prawidlowaOdpowiedz.value,
     };
+    console.log(pytaniedata.tresc); 
     this.authService.dodaniePytania(pytaniedata).subscribe(
       data => {
       console.log(data); 
@@ -80,7 +81,7 @@ export class PanelAdministratoraComponent implements OnInit {
       if (error.status === 404) {
         this.errorMessage="Błąd serwera";
       }else if (error.status === 400) {
-        this.errorMessage="Użytkownik już istnieje, wprowadź inne dane.";
+        this.errorMessage="Pytanie już istnieje, wprowadź inne dane.";
       }else {
         this.errorMessage="";
       }

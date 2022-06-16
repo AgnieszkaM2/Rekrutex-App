@@ -37,7 +37,7 @@
                   <tr>
                     <td><label>Kategoria: </label></td>
                     <td>
-                      <select id="test2">
+                      <select id="kategoriaPytania">
                         <option value=Informatyk selected>Informatyk</option>
                         <option value=Elektronik>Elektronik</option>
                       </select>
@@ -67,8 +67,8 @@
                   </tr>
                   <hr>
                   <tr>
-                    <td><label>Poprawna: </label></td>
-                    <td><select id="test3">
+                    <td><label>Prawidłowa: </label></td>
+                    <td><select id="prawidlowaOdpowiedz">
                       <option [value]="1" selected>1</option>
                       <option [value]="2">2</option>
                       <option [value]="3">3</option>
@@ -78,14 +78,15 @@
                   
                   <br>
                 </table>
-              </form>
+              
                 
                 <div class="przycisk_tlo" id="panel_dodaj_tlo">
                   <div class="przycisk_cialo" id="panel_dodaj_cialo">
                     <input class="przycisk_input" type="submit" id="panel_dodaj_pytanie">
-                    <label class="przycisk_label" id="panel_dodaj_label" for="panel_dodaj_pytanie" (click)="submit()">Dodaj</label>
+                    <label class="przycisk_label" id="panel_dodaj_label" for="panel_dodaj_pytanie">Dodaj</label>
                   </div>
                 </div>
+              </form>
             </div>
             <div class="content-value" *ngIf="id === 'dwa'" align="center">
                 <label>Lista użytkowników:</label>
