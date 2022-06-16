@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewChild, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
@@ -14,68 +14,65 @@ import { PytaniaTestService } from 'src/app/services/pytania-test.service';
 
 export class PanelAdministratoraComponent implements OnInit {
 
-  dodatniePytaniaForm: FormGroup;
+  dodaniePytaniaForm: FormGroup;
 
   constructor(private fb: FormBuilder, private pytania: PytaniaTestService, private authService: AuthService, private router: Router){
-    this.dodatniePytaniaForm = this.fb.group(
+    this.dodaniePytaniaForm = this.fb.group(
       {
-        'dodatniePytania_tresc': [''],
-        'dodatniePytania_odp1': [''],
-        'dodatniePytania_odp2': [''],
-        'dodatniePytania_odp3': [''],
-        'dodatniePytania_odp4': [''],
+        'dodaniePytania_tresc': [''],
+        'dodaniePytania_odp1': [''],
+        'dodaniePytania_odp2': [''],
+        'dodaniePytania_odp3': [''],
+        'dodaniePytania_odp4': [''],
       }
       );
   }
+  
   ngOnInit(): void {
     this.pobieranieUzytkownikow();
     this.getCategory();
   }
 
-  get dodatniePytania_tresc() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_tresc')
-  }
-  get dodatniePytania_odp1() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_odp1')
-  }
-  get dodatniePytania_odp2() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_odp2')
-  }
-  get dodatniePytania_odp3() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_odp3')
-  }
-  get dodatniePytania_odp4() {
-    return this.dodatniePytaniaForm.get('dodatniePytania_odp4')
-  }
-
   dodaniePytaniaError: boolean=false;
   errorMessage="";
-
-
 
   submit(){
     var kategoriaDoPytania = (document.getElementById("kategoriaPytania")) as HTMLSelectElement;
     var prawidlowaOdpowiedz = (document.getElementById("prawidlowaOdpowiedz")) as HTMLSelectElement;
+    var tresc = (document.getElementById("tresc_pytania")) as HTMLSelectElement;
+    var odp1 = (document.getElementById("odp1")) as HTMLSelectElement;
+    var odp2 = (document.getElementById("odp2")) as HTMLSelectElement;
+    var odp3 = (document.getElementById("odp3")) as HTMLSelectElement;
+    var odp4 = (document.getElementById("odp4")) as HTMLSelectElement;
+    var poprawnaOdpowiedz;
+    if (Number(prawidlowaOdpowiedz.value) == 1){
+      poprawnaOdpowiedz = odp1;
+    }
+    if (Number(prawidlowaOdpowiedz.value) == 2){
+      poprawnaOdpowiedz = odp2;
+    }
+    if (Number(prawidlowaOdpowiedz.value) == 3){
+      poprawnaOdpowiedz = odp3;
+    }
+    if (Number(prawidlowaOdpowiedz.value) == 4){
+      poprawnaOdpowiedz = odp4;
+    }
     let pytaniedata = {
       kategoria: kategoriaDoPytania.value,
-      tresc: this.dodatniePytaniaForm.value.tresc,
-      odp1: this.dodatniePytaniaForm.value.odp1,
-      odp2: this.dodatniePytaniaForm.value.odp2,
-      odp3: this.dodatniePytaniaForm.value.odp3,
-      odp4: this.dodatniePytaniaForm.value.odp4,
-      poprawna: this.dodatniePytaniaForm.value.odp4,
+      tresc: tresc.value,
+      odp1: odp1.value,
+      odp2: odp2.value,
+      odp3: odp3.value,
+      odp4: odp4.value,
+      poprawna: poprawnaOdpowiedz.value,
       prawidlowa: prawidlowaOdpowiedz.value,
     };
-    console.log(pytaniedata.tresc); 
+    
     this.authService.dodaniePytania(pytaniedata).subscribe(
       data => {
       console.log(data); 
       console.log('wysłane')
-      this.dodatniePytaniaForm.controls['dodatniePytania_tresc'].reset();
-      this.dodatniePytaniaForm.controls['dodatniePytania_odp1'].reset();
-      this.dodatniePytaniaForm.controls['dodatniePytania_odp2'].reset();
-      this.dodatniePytaniaForm.controls['dodatniePytania_odp3'].reset();
-      this.dodatniePytaniaForm.controls['dodatniePytania_odp4'].reset();
+      this.dodaniePytaniaForm.reset();
     },
     (error) => {
       if (error.status === 404) {

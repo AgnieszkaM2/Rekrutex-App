@@ -4,9 +4,9 @@ header("Access-Control-Allow-Methods: POST");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-//require 'connect.php';
+require 'connect.php';
 
-//$pytaniedata=json_decode(file_get_contents("php://input"));
+$pytaniedata=json_decode(file_get_contents("php://input"));
 if($pytaniedata!=null){
     $kategoria=$pytaniedata->kategoria;
     $tresc=$pytaniedata->tresc;

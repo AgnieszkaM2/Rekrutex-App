@@ -32,7 +32,7 @@
           <br>
           <div class ="zakladka-admina">
             <div class="content-value" *ngIf="id === 'jeden'" align="center">
-              <form [formGroup]="dodatniePytaniaForm" (ngSubmit)="submit()">
+              <form [formGroup]="dodaniePytaniaForm" (ngSubmit)="submit()">
                 <table id="dodanie_pytana">
                   <tr>
                     <td><label>Kategoria: </label></td>
@@ -47,23 +47,23 @@
                 <hr width="100%">
                   <tr>
                     <td><label>Treść pytania: </label></td>
-                    <td><input id="tresc_pytania" type="textarea" rows=4 class="form-control" placeholder="" formControlName="dodatniePytania_tresc"><br></td>
+                    <td><input id="tresc_pytania" type="text" class="form-control" placeholder="" formControlName="dodaniePytania_tresc"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 1: </label></td>
-                    <td><input id="odp1" type="textarea" class="form-control" placeholder="" formControlName="dodatniePytania_odp1"><br></td>
+                    <td><input id="odp1" type="text" class="form-control" placeholder="" formControlName="dodaniePytania_odp1"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 2: </label></td>
-                    <td><input id="odp2" type="textarea" class="form-control" placeholder="" formControlName="dodatniePytania_odp2"><br></td>
+                    <td><input id="odp2" type="text" class="form-control" placeholder="" formControlName="dodaniePytania_odp2"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 3: </label></td>
-                    <td><input id="odp3" type="textarea" class="form-control" placeholder="" formControlName="dodatniePytania_odp3"><br></td>
+                    <td><input id="odp3" type="text" class="form-control" placeholder="" formControlName="dodaniePytania_odp3"><br></td>
                   </tr>
                   <tr>
                     <td><label>Odpowiedź 4: </label></td>
-                    <td><input id="odp4" type="textarea"  class="form-control" placeholder="" formControlName="dodatniePytania_odp4"><br></td>
+                    <td><input id="odp4" type="text"  class="form-control" placeholder="" formControlName="dodaniePytania_odp4"><br></td>
                   </tr>
                   <hr>
                   <tr>
@@ -104,7 +104,7 @@
                     <td>{{user.id}}</td>
                     <td>{{user.imie}}</td>
                     <td>{{user.nazwisko}}</td>
-                    <td  id="tabela_email">{{user.email}}</td>
+                    <td id="tabela_email">{{user.email}}</td>
                   </tr>
                 </table>
                 <hr>
