@@ -294,7 +294,7 @@ aside {
 
 .menu_label{
   background: var(--light-bkg);
-  padding:25px;
+  padding:20px;
 }
 #menu_witaj_label{
   background: var(--content-bkg);

@@ -38,13 +38,19 @@ select,option{
     width:98%;
     position: relative;
   }
+  #tabela_uzytkownikow tr{
+    overflow-x: scroll;
+  }
 #tabela_uzytkownikow thead{
       background-color: rgba(var(--header-bkg-rgb), 0.4);
       border-left: rgba(var(--header-bkg-rgb), 0.4);
       border-right: rgba(var(--header-bkg-rgb), 0.4);
       border-collapse: collapse;
   }
-  
+  #div_tabeli{
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
 #tabela_uzytkownikow tr:nth-of-type(7n){
       background-color: rgba(var(--header-bkg-rgb), 0.2);
       border-left: rgba(var(--header-bkg-rgb), 0.2);
@@ -64,8 +70,8 @@ input[type=textarea],input[type=text], input[type=password]{
     padding-right:10px;
   }
 .przycisk_tlo {
-    width: 30%;
-    left:35%;
+    width: 50%;
+    left:25%;
 
 }
 th{
@@ -81,6 +87,7 @@ td{
     padding-bottom:7px;
     padding-left:5px;
     padding-right:5px;
+    word-break: normal;
   }
 tr:hover{
     background-color: rgba(var(--main-div-bkg-rgb), 0.7);
