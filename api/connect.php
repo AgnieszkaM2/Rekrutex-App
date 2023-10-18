@@ -1,8 +1,8 @@
 <?php
 define('DB_HOST', 'remotemysql.com');
-define('DB_USER', 'XtKYx97kfB');
-define('DB_PASS', 'rt9JC3srMC');
-define('DB_NAME', 'XtKYx97kfB');
+define('DB_USER', '');
+define('DB_PASS', '');
+define('DB_NAME', '');
 
 // Connect with the database.
 function connect()
